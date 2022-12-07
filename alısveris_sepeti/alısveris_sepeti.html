@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alışveriş Sepeti</title>
+    <script
+      src="https://kit.fontawesome.com/a810772b52.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      thead {
+        background-color: rgba(89, 88, 89, 255);
+        color: rgba(255, 255, 255, 255);
+      }
+      .son {
+        background-color: rgba(89, 88, 89, 255);
+        color: rgba(255, 255, 255, 255);
+      }
+      .koyu {
+        background-color: rgba(205, 205, 205, 255);
+      }
+      .acik {
+        background-color: rgba(232, 232, 232, 255);
+      }
+      table {
+        width: 90%;
+        margin: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      td {
+        padding: 0px 10px 0px 5px;
+      }
+      th {
+        padding: 5px 10px 5px 5px;
+      }
+      .urunler {
+        text-align: left;
+        width: 20%;
+      }
+      .urunkodu {
+        text-align: left;
+      }
+      .miktar {
+        text-align: center;
+      }
+      .fiyat {
+        text-align: end;
+      }
+      i {
+        padding: 10px;
+      }
+      .btn {
+        background-color: rgba(238,117,95,255);
+        padding: 5px 10px 5px 10px;
+        text-align: end;
+       
+        
+        color: white;
+        font-size: 17px;
+
+      }
+      .edt {
+        text-align: center;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div style="width: 80%">
+      <table >
+        <thead>
+          <tr>
+            <th class="urunler">Ürün Kodu</th>
+            <th class="urunler">Ürün Adı</th>
+            <th>Miktar</th>
+            <th>Birim Fiyat</th>
+            <th>Ara Toplam</th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr class="koyu">
+            <td class="urunkodu">154654</td>
+            <td class="urunler">Notebook</td>
+            <td class="miktar">1</td>
+            <td class="fiyat">5.400₺</td>
+            <td class="fiyat">5.400₺</td>
+            <td class="edt">
+              <i class="fa-regular fa-pen-to-square"></i
+              ><i class="fa-solid fa-trash-can"></i>
+            </td>
+          </tr>
+          <tr class="acik">
+            <td class="urunkodu">456466</td>
+            <td class="urunler">Klavye</td>
+            <td class="miktar">2</td>
+            <td class="fiyat">80₺</td>
+            <td class="fiyat">160₺</td>
+            <td class="edt">
+              <i class="fa-regular fa-pen-to-square"></i
+              ><i class="fa-solid fa-trash-can"></i>
+            </td>
+          </tr>
+          <tr class="koyu">
+            <td class="urunkodu">564646</td>
+            <td class="urunler">Monitör</td>
+            <td class="miktar">1</td>
+            <td class="fiyat">700₺</td>
+            <td class="fiyat">700₺</td>
+            <td class="edt">
+              <i class="fa-regular fa-pen-to-square"></i
+              ><i class="fa-solid fa-trash-can"></i>
+            </td>
+          </tr>
+          <tr class="acik">
+            <td class="urunkodu">123598</td>
+            <td class="urunler">Mouse</td>
+            <td class="miktar">2</td>
+            <td class="fiyat">50₺</td>
+            <td class="fiyat">100₺</td>
+            <td class="edt">
+              <i class="fa-regular fa-pen-to-square"></i
+              ><i class="fa-solid fa-trash-can"></i>
+            </td>
+          </tr>
+          <tr class="koyu">
+            <td class="urunkodu">613448</td>
+            <td class="urunler">Play Station</td>
+            <td class="miktar">1</td>
+            <td class="fiyat">2500₺</td>
+            <td class="fiyat">2500₺</td>
+            <td class="edt">
+              <i class="fa-regular fa-pen-to-square"></i
+              ><i class="fa-solid fa-trash-can"></i>
+            </td>
+          </tr>
+          <tr class="acik">
+            <td class="urunkodu">789799</td>
+            <td class="urunler">Usb Bellek</td>
+            <td class="miktar">3</td>
+            <td class="fiyat">120₺</td>
+            <td class="fiyat">360₺</td>
+            <td class="edt">
+              <i class="fa-regular fa-pen-to-square"></i
+              ><i class="fa-solid fa-trash-can"></i>
+            </td>
+          </tr>
+          <tr class="son">
+            <td colspan="4" style="text-align: right; padding: 5px">TOPLAM</td>
+            <!-- <td></td> -->
+            <!-- <td></td> -->
+            <!-- <td></td> -->
+            <td class="fiyat">9.220tl</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td colspan="2" class="btn"><i class="fa-solid fa-cart-shopping" style="color:rgba(255, 255, 255, 255) ;"></i>Alışverişe Devam</td>
+            <!-- <td></td> -->
+            <td colspan="2" class="btn"><i style="color:rgba(255, 255, 255, 255) ;"  class="fa-solid fa-credit-card" ></i>Ödemeye Geç</td>
+            <!-- <td></td> -->
+            
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+  </body>
+</html>

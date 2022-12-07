@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin: auto;
+    background-image:url(https://cdn.pixabay.com/photo/2022/11/24/02/28/clouds-7613361_960_720.png);
+}
+form{
+     background: linear-gradient(to bottom right, #33ccff 0%, #ff99cc 100%);
+    text-align: center;
+    padding: 20px;
+    width: fit-content;
+    margin: auto;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+}
+label{
+    display: inline-block;
+    width: 120px;
+    text-align: left;
+    color: black;
+}
+div {
+    padding: 5px;
+}
+h1{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.btn {
+    background-color: #ff99cc;
+    border: 1px solid pink ;
+    border-radius: 60px;
+    padding: 3px;
+}
+.btn:hover{
+    background-color: purple;
+}

@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    
+    
+}
+
+label{
+    display: inline-block;
+    width:100px;
+    margin: 10px ;
+    font-weight: 800px;
+    
+}
+form{
+    width: fit-content;
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 10px;
+    background: linear-gradient(to left, #33ccff7e 0%, #d48cb0a3 100%)
+
+}
+.inputs{
+    margin: 5px;
+    padding: 5px;
+    display: inline-block;
+    width: 170px;
+    margin-top: 10px;
+    
+}
+h1{
+    text-align: center;
+    margin-top: 10px;
+}
+.btn{
+    text-align: center;
+    
+}
+.buttons{
+    border: 1px solid indianred;
+    background-color: #ff99cc;
+    border-radius: 5px;
+    padding: 5px 10px ;
+    margin-bottom: 15px;
+}
+.radios{
+    width: 10px;
+}
+.gender-div{
+    display: inline-block;
+}
+.gender-label{
+    width: fit-content;
+}
+.buttons:hover{
+    background-color: rgba(128, 0, 128, 0.472);
+}
