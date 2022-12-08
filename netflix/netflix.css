@@ -1,0 +1,36 @@
+body{
+    background-image:url("netflix.jpg");
+    color: white;
+    text-align: center;
+}
+form{
+    background-color: rgba(0, 0, 0, 0.835);
+    width: fit-content;
+    margin: auto;
+    text-align: left;
+    padding: 15px;
+    
+}
+form.child{
+    display: inline-block;
+    margin-left: 10px;
+}
+h1{
+    color: red;
+    font-size: 50px;
+    margin-bottom: 5px;
+}
+input{
+    padding: 10px 40px;
+    margin: 5px ;
+}
+p{
+    font-weight: 700;
+}
+.body{
+    background-color: rgba(0, 0, 0, 0.616);
+    margin: 15px;
+}
+label{
+    margin-bottom: 50px;
+}
