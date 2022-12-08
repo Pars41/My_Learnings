@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    font-size: 70px;
+    
+}
+p{
+    font-size: 25px;
+    margin: 20px 5px;
+}
+.info label {
+    display: block;
+    font-size: 20px;
+    margin: 5px;
+}
+.info input{
+    margin: 8px 5px;
+    padding: 8px;
+    width: 190px;
+}
+select {
+    padding: 8px ;
+    margin: 8px 5px;
+
+    width: 210px;
+
+}
+.prfr input{
+    margin: 10px 10px;
+}
+.prfr label{
+    width: 8px;
+    
+    
+}
+.imp input{
+    margin:  10px ;
+    padding: 10px;
+}
+.imp label{
+    margin:  10px 0px ;
+    padding: 10px;
+}
+textarea{
+    margin-left: 5px;
+}
