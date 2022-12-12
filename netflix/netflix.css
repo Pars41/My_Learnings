@@ -28,9 +28,15 @@ p{
     font-weight: 700;
 }
 .body{
-    background-color: rgba(0, 0, 0, 0.616);
+    background-color: rgba(0, 0, 0, 0.557);
     margin: 15px;
 }
 label{
     margin-bottom: 50px;
+}
+select{
+    
+}
+textarea{
+    resize: none;
 }
