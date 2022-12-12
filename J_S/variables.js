@@ -26,3 +26,13 @@ console.log(ogr1_yas);
 let ogr2_yas = suankiYil-ogr2_dgm;
 console.log(ogr2_yas);
 
+function Basarilimi(ort){
+    if(ort>=50){
+        console.log("Öğrencimiz başarılı");
+    }
+    else{
+        console.log("Öğrenciniz gabi");
+    }
+    
+}
+Basarilimi(ogr2_ort);
