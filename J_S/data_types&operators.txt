@@ -1,0 +1,41 @@
+Data Types && Operators
+	
+
+	Data Types
+
+   JavaScript'te ilkel (ilkel değer, ilkel veri türü), nesne olmayan ve hiçbir yöntemi veya özelliği olmayan verilerdir. 7 ilkel veri türü vardır:
+*There are 7 primitive data types:
+	-string.            -_-object
+	-number.
+	-bigint.
+	-boolean.
+	-undefined.
+	-symbol.
+	-null.
+	
+
+
+
+
+   	Operators
+   -Assignment Operators (Atama operatörleri)
+	+Addition operator.
+    	- Subtraction operator.
+	* Multiplication operator.
+	/ Division operator.
+	% Modulus (Remainder) operator.
+	** Exponentiation operator.
+
+   -Arithmetic Operators (Aritmetik Operatörler)
+   -Comparison Operators (Karşılaştırma Operatörleri)
+   -Logical Operators  (Mantıksal Operatörler)
+   -Other Operators		(Diğer Operatörler)
+
+
+	***Falsy değer içeren veri tipleri;
+	-False
+	-NaN
+	-Undefined
+	-Null
+	-""
+	-0
