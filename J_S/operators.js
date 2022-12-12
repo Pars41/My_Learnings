@@ -32,6 +32,24 @@ result = (a > b);
 result = (a < b);
 result = (a <= b);
 
-// Logical Operators
+// Logical Operators &&  ||  ! (null,undefined,"",0,NaN ışındaki durumlar true kabul edilir)
 
-console.log(result);
+result = a+b+c;
+if(result>60){
+    console.log("evet 60dan büyük");
+}
+if(result>60 && b>60){
+    console.log("evet 60dan büyük");
+}else{
+    console.log("ikisi birden 60dan büyük değil");
+}
+
+if(result>60 || b>60){
+    console.log("evet ikisinden birisi 60dan büyük");
+}else{
+    console.log("hayır ikisi de 60dan büyük değil");
+}
+
+result = c>50;
+
+console.log(!result);
