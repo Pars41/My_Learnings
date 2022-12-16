@@ -5,27 +5,27 @@
 
 // 1- Bir sayının tek mi çift mi olduğunu consol'a yazdıran koşulu yazınız.
 
-let number;
-number = 0;
-let kontrol = number%2;
-if(kontrol==0){
-    console.log(`sayı ${number} çifttir`);
-}else if (kontrol==1){
-    console.log(`sayı ${number} tektir`);
-}
+// let number;
+// number = 0;
+// let kontrol = number%2;
+// if(kontrol==0){
+//     console.log(`sayı ${number} çifttir`);
+// }else if (kontrol==1){
+//     console.log(`sayı ${number} tektir`);
+// }
 
 
 // 2- Bir sayının 0 ile 100 arasında olup olmadığını konsola yazdıran ternary yapıyı yazınız.
-let num;
-num = 100;
-(num>0 && num<100) ? console.log("sayı 0-100 arasındadır") : console.log("değildir");
+// let num;
+// num = 100;
+// (num>0 && num<100) ? console.log("sayı 0-100 arasındadır") : console.log("değildir");
 
 
 // 3- 18 yaşından büyüklerin oy kullanabileceğini 18 yaşından küçüklerin oy kullanamayacağını ternary yapı ile
 // konsola yazdıran kodu yazınız. 
-let yas;
-yas = 1;
-(yas>18)? console.log("oy kullanabilir") : console.log("oy kullanamaz");
+// let yas;
+// yas = 1;
+// (yas>18)? console.log("oy kullanabilir") : console.log("oy kullanamaz");
 
 // 4- Haftanın günlerinin numaraları aşağıda belirtilmiştir. Buna göre belirtilen bir sayının hangi güne 
 // karşılık gelidiğini switch case yapı ile konsola yazdıran kodu yazınız.
@@ -36,40 +36,40 @@ yas = 1;
 // Perşembe 4
 // Cuma 5
 // Cumartesi 6
-let  sayi;
-sayi = 0;
-switch(sayi){
-    case 0 :
-    console.log("pazar");
-    break;
+// let  sayi;
+// sayi = 0;
+// switch(sayi){
+//     case 0 :
+//     console.log("pazar");
+//     break;
 
-    case 1 :
-    console.log("Pazartesi");  
-    break;
+//     case 1 :
+//     console.log("Pazartesi");  
+//     break;
 
-    case 2 :
-    console.log("Salı");  
-    break;
+//     case 2 :
+//     console.log("Salı");  
+//     break;
 
-    case 3 :
-    console.log("Çarşamba");  
-    break;
+//     case 3 :
+//     console.log("Çarşamba");  
+//     break;
 
-    case 4 :
-    console.log("Perşembe"); 
-    break;
+//     case 4 :
+//     console.log("Perşembe"); 
+//     break;
 
-    case 5:
-    console.log("Cuma");  
-    break;
+//     case 5:
+//     console.log("Cuma");  
+//     break;
     
-    case 6 :
-    console.log("Cumartesi");  
-    break;
+//     case 6 :
+//     console.log("Cumartesi");  
+//     break;
 
-    default :
-    console.log("girdiğin sayı alakasız");
-}
+//     default :
+//     console.log("girdiğin sayı alakasız");
+// }
 
 // 5- 
 // Bir dersten alınan notun harfini aşağıdaki duruma göre konsola yazdırınız? 
@@ -83,35 +83,35 @@ switch(sayi){
 // 30'den büyük yada 40'a eşitse DD,
 // 30'dan küçük yada eşitse FF ,
 
-let not;
-not = 10;
-if(not>100){
-    console.log("böyle not mu olur!");
-}
-else if(not<=100 && not>90){
-    console.log("Notunuz AA");
-}
-else if(not<=90 && not>80){
-    console.log("Notunuz AB");
-}
-else if(not<=80 && not>70){
-    console.log("Notunuz BB");
-}
-else if(not<=70 && not>60){
-    console.log("Notunuz BC");
-}
-else if(not<=60 && not>50){
-    console.log("Notunuz CC");
-}
-else if(not<=50 && not>40){
-    console.log("Notunuz CD");
-}
-else if(not<=40 && not>30){
-    console.log("Notunuz DD");
-}
-else{
-    console.log("Notunuz FF");
-}
+// let not;
+// not = 10;
+// if(not>100){
+//     console.log("böyle not mu olur!");
+// }
+// else if(not<=100 && not>90){
+//     console.log("Notunuz AA");
+// }
+// else if(not<=90 && not>80){
+//     console.log("Notunuz AB");
+// }
+// else if(not<=80 && not>70){
+//     console.log("Notunuz BB");
+// }
+// else if(not<=70 && not>60){
+//     console.log("Notunuz BC");
+// }
+// else if(not<=60 && not>50){
+//     console.log("Notunuz CC");
+// }
+// else if(not<=50 && not>40){
+//     console.log("Notunuz CD");
+// }
+// else if(not<=40 && not>30){
+//     console.log("Notunuz DD");
+// }
+// else{
+//     console.log("Notunuz FF");
+// }
 
 
 // 6- Artık yıl sorusu 
@@ -122,6 +122,17 @@ else{
 
 // Yukarıdaki bilgilere göre bir yılın artık yıl olup olmadığını konsola yazdıran conditional statement'i yazınız. 
 
+// let sene ;
+// sene = 1900;
+
+// if((sene%4 != 0) || (sene%100 == 0 && sene%400 != 0) ){
+//     console.log("artık yıl değil Şubat 28 gün");
+// }else{
+//     console.log("artık yıl şubat 29 gün");
+// }
+
 
 // 7- kullanıcıdan bir yıl ve ay alıyoruz o ayın kaç çektiğini konsola yazdıran kodu yazınız. 
 // (2024'ün 2. ayı 29 çeker.) 
+
+
