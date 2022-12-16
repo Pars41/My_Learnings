@@ -84,7 +84,7 @@
 // 30'dan küçük yada eşitse FF ,
 
 // let not;
-// not = 10;
+// not = -40;
 // if(not>100){
 //     console.log("böyle not mu olur!");
 // }
@@ -162,7 +162,7 @@ function kacceker(sene,ay) {
     
 }
 
-kacceker(2024,1);
+kacceker(1800,1);
 
 
 
