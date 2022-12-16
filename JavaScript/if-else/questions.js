@@ -135,4 +135,38 @@
 // 7- kullanıcıdan bir yıl ve ay alıyoruz o ayın kaç çektiğini konsola yazdıran kodu yazınız. 
 // (2024'ün 2. ayı 29 çeker.) 
 
+// let sene;
+// let ay;
+// sene = 2022;
+// ay = 1;
+
+function kacceker(sene,ay) {
+    if((sene%4 != 0) || (sene%100 == 0 && sene%400 != 0) ){
+        if(ay == 0 || ay == 2 || ay == 4 || ay == 6 || ay == 7 || ay == 9|| ay == 11){
+            console.log("Seçtiğiniz ay 31 gün çeker!");
+        }else if (ay == 1){
+            console.log("Seçtiğiniz ay 28 gün çeker!");
+        }else{
+            console.log("Seçtiğiniz ay 30 gün çeker");
+        }
+    }else{
+        if(ay == 0 || ay == 2 || ay == 4 || ay == 6 || ay == 7 || ay == 9|| ay == 11){
+            console.log("Seçtiğiniz ay 31 gün çeker!");
+        }else if (ay == 1){
+            console.log("Seçtiğiniz ay 29 gün çeker!");
+        }else{
+            console.log("Seçtiğiniz ay 30 gün çeker");
+        }
+    }
+    
+    
+}
+
+kacceker(2024,1);
+
+
+
+
+
+
 
