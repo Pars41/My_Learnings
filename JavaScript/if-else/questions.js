@@ -36,7 +36,40 @@ yas = 1;
 // Perşembe 4
 // Cuma 5
 // Cumartesi 6
+let  sayi;
+sayi = 0;
+switch(sayi){
+    case 0 :
+    console.log("pazar");
+    break;
 
+    case 1 :
+    console.log("Pazartesi");  
+    break;
+
+    case 2 :
+    console.log("Salı");  
+    break;
+
+    case 3 :
+    console.log("Çarşamba");  
+    break;
+
+    case 4 :
+    console.log("Perşembe"); 
+    break;
+
+    case 5:
+    console.log("Cuma");  
+    break;
+    
+    case 6 :
+    console.log("Cumartesi");  
+    break;
+
+    default :
+    console.log("girdiğin sayı alakasız");
+}
 
 // 5- 
 // Bir dersten alınan notun harfini aşağıdaki duruma göre konsola yazdırınız? 
