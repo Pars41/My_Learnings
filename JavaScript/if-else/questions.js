@@ -5,14 +5,14 @@
 
 // 1- Bir sayının tek mi çift mi olduğunu consol'a yazdıran koşulu yazınız.
 
-// let number;
-// number = 0;
-// let kontrol = number%2;
-// if(kontrol==0){
-//     console.log(`sayı ${number} çifttir`);
-// }else if (kontrol==1){
-//     console.log(`sayı ${number} tektir`);
-// }
+let number;
+number = 0;
+let kontrol = number%2;
+if(kontrol==0){
+    console.log(`${number} sayısı  çifttir`);
+}else if (kontrol==1){
+    console.log(`${number} sayısı tektir`);
+}
 
 
 // 2- Bir sayının 0 ile 100 arasında olup olmadığını konsola yazdıran ternary yapıyı yazınız.
@@ -38,38 +38,38 @@
 // Cumartesi 6
 // let  sayi;
 // sayi = 0;
-// switch(sayi){
-//     case 0 :
-//     console.log("pazar");
-//     break;
+switch(sayi){
+    case 0 :
+    console.log("pazar");
+    break;
 
-//     case 1 :
-//     console.log("Pazartesi");  
-//     break;
+    case 1 :
+    console.log("Pazartesi");  
+    break;
 
-//     case 2 :
-//     console.log("Salı");  
-//     break;
+    case 2 :
+    console.log("Salı");  
+    break;
 
-//     case 3 :
-//     console.log("Çarşamba");  
-//     break;
+    case 3 :
+    console.log("Çarşamba");  
+    break;
 
-//     case 4 :
-//     console.log("Perşembe"); 
-//     break;
+    case 4 :
+    console.log("Perşembe"); 
+    break;
 
-//     case 5:
-//     console.log("Cuma");  
-//     break;
+    case 5:
+    console.log("Cuma");  
+    break;
     
-//     case 6 :
-//     console.log("Cumartesi");  
-//     break;
+    case 6 :
+    console.log("Cumartesi");  
+    break;
 
-//     default :
-//     console.log("girdiğin sayı alakasız");
-// }
+    default :
+    console.log("girdiğin sayı alakasız");
+}
 
 // 5- 
 // Bir dersten alınan notun harfini aşağıdaki duruma göre konsola yazdırınız? 
@@ -140,29 +140,28 @@
 // sene = 2022;
 // ay = 1;
 
-function kacceker(sene,ay) {
-    if((sene%4 != 0) || (sene%100 == 0 && sene%400 != 0) ){
-        if(ay == 0 || ay == 2 || ay == 4 || ay == 6 || ay == 7 || ay == 9|| ay == 11){
-            console.log("Seçtiğiniz ay 31 gün çeker!");
-        }else if (ay == 1){
-            console.log("Seçtiğiniz ay 28 gün çeker!");
-        }else{
-            console.log("Seçtiğiniz ay 30 gün çeker");
-        }
-    }else{
-        if(ay == 0 || ay == 2 || ay == 4 || ay == 6 || ay == 7 || ay == 9|| ay == 11){
-            console.log("Seçtiğiniz ay 31 gün çeker!");
-        }else if (ay == 1){
-            console.log("Seçtiğiniz ay 29 gün çeker!");
-        }else{
-            console.log("Seçtiğiniz ay 30 gün çeker");
-        }
-    }
+// function kacceker(sene,ay) {
+//     if((sene%4 != 0) || (sene%100 == 0 && sene%400 != 0) ){
+//         if(ay == 0 || ay == 2 || ay == 4 || ay == 6 || ay == 7 || ay == 9|| ay == 11){
+//             console.log("Seçtiğiniz ay 31 gün çeker!");
+//         }else if (ay == 1){
+//             console.log("Seçtiğiniz ay 28 gün çeker!");
+//         }else{
+//             console.log("Seçtiğiniz ay 30 gün çeker");
+//         }
+//     }else{
+//         if(ay == 0 || ay == 2 || ay == 4 || ay == 6 || ay == 7 || ay == 9|| ay == 11){
+//             console.log("Seçtiğiniz ay 31 gün çeker!");
+//         }else if (ay == 1){
+//             console.log("Seçtiğiniz ay 29 gün çeker!");
+//         }else{
+//             console.log("Seçtiğiniz ay 30 gün çeker");
+//         }
+//     }
     
     
-}
-
-kacceker(1800,1);
+// }
+// kacceker(1800,1);
 
 
 
