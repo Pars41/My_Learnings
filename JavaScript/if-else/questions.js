@@ -83,6 +83,36 @@ switch(sayi){
 // 30'den büyük yada 40'a eşitse DD,
 // 30'dan küçük yada eşitse FF ,
 
+let not;
+not = 10;
+if(not>100){
+    console.log("böyle not mu olur!");
+}
+else if(not<=100 && not>90){
+    console.log("Notunuz AA");
+}
+else if(not<=90 && not>80){
+    console.log("Notunuz AB");
+}
+else if(not<=80 && not>70){
+    console.log("Notunuz BB");
+}
+else if(not<=70 && not>60){
+    console.log("Notunuz BC");
+}
+else if(not<=60 && not>50){
+    console.log("Notunuz CC");
+}
+else if(not<=50 && not>40){
+    console.log("Notunuz CD");
+}
+else if(not<=40 && not>30){
+    console.log("Notunuz DD");
+}
+else{
+    console.log("Notunuz FF");
+}
+
 
 // 6- Artık yıl sorusu 
 // Artık yıl, bir yıldaki günlerin 365 yerine 366 gün olmasına denir. Bu fazladan gün (artık gün), normalde 28 gün 
