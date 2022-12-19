@@ -1,0 +1,54 @@
+.parent{
+    background-color: #3AA2DE;
+    padding: 5px;
+    margin: 5px;
+    width: 80%;
+    border: 2px solid lightgray;
+    height: 200vh;
+
+    position: relative;
+
+
+
+
+}
+.child-one{
+    background-color: #3ADEC1;
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid lightgray;
+/* 
+    position: absolute;
+    top: 0; */
+
+    position: sticky;
+    top: 5px;
+
+
+}
+.child-two{
+    background-color: #4DE5F5;
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid lightgray;
+
+    /* position: fixed;
+    left: 0; */
+
+    
+}
+.child-three{
+    background-color: #7FFAC2;
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid lightgray;
+    
+    /* position: relative;
+    top: 15px;
+    right: 5px; */
+
+    position: sticky;
+    top: 35px;
+
+    
+}
