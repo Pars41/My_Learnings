@@ -13,4 +13,5 @@ function ucKurusaBesKofte(kurus,kacKöfte){
     
 }
 
+
 ucKurusaBesKofte(250,10);
