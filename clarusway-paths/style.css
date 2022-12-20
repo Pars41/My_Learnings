@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: rgb(131, 58, 180);
+  background: radial-gradient(
+    circle,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 75%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  color: white;
+}
+img {
+  width: 150;
+  float: left;
+  width: 50%;
+}
+div {
+  border: 2px solid rgb(255, 255, 255);
+  padding: 10px;
+  margin: 20px auto;
+  width:80% ;
+  height: fit-content;
+  border-radius: 10px;
+  background-color: rgba(181, 154, 22, 0.23);
+}
+#header h1 {
+  text-align: center;
+  font-family: "Bowlby One SC", cursive;
+  font-family: "EB Garamond", serif;
+  font-family: "Rubik Vinyl", cursive;
+  font-size: 80px;
+  font-weight: 700;
+}
+h2 {
+  color: black;
+  font-size: 32px;
+}
+p{
+    font-size: 16px;
+}
