@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgba(222, 184, 135, 0.51);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,87,121,1) 50%, rgba(0,212,255,1) 100%);
+}
+div.hp{
+    /* border: 2px solid blue; */
+    width: 60%;
+    display: inline-block;
+    
+    
+    
+}
+h1{
+    text-align: center;
+    font-size: 80px;
+    font-family: 'Rubik Vinyl', cursive;
+    margin: 10px;
+    color: white;
+}
+img{
+    width: 250px;
+    /* float: left; */
+}
+div.path{
+    /* border: 2px solid red; */
+    margin: 20px auto;
+    height: fit-content;
+    width: 80%;
+    background: linear-gradient(90deg, rgba(131,58,180,0.7) 0%, rgba(253,29,29,0.7) 41%, rgba(252,176,69,0.7) 100%);
+    border: 1px solid rgba(9,87,121,1);
+    border-radius: 10px;
+    padding: 15px;
+}
+h2{
+    font-size: 32px;
+}
