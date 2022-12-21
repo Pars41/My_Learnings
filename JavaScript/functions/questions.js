@@ -32,19 +32,28 @@
 // yaziTura();
 // 4- Kendisine gönderilen bir sayının tam bölenlerini dizi şeklinde döndüren fonksiyonu yazınız.
 
-function tamBolen(numb){
-    let dizi= [];
-    for(let i= 2 ; i<numb ; i++){
-        if(numb%i === 0){
-            dizi.push(i)
+// function tamBolen(numb){
+//     let dizi= [];
+//     for(let i= 2 ; i<numb ; i++){
+//         if(numb%i === 0){
+//             dizi.push(i)
             
-        }
+//         }
         
-    }
+//     }
 
-    return dizi;
-}
-console.log(tamBolen(96));
+//     return dizi;
+// }
+// console.log(tamBolen(96));
 
 
 // 5- Değişken sayıda parametre alan toplam isminde bir fonksiyon tanımlayınız.
+
+function toplam(){
+    let sonuc = 0;
+    for(let i= 0; i<arguments.length ; i++){
+        sonuc+=arguments[i];
+    }
+    return sonuc;
+}
+console.log(toplam(5,6,7,1,3,4));
