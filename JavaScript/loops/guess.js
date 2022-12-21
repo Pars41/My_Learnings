@@ -10,14 +10,16 @@ let count = 0;
 do {
   guessNumber = prompt("Guess Number between 0 and 100");
   count++;
-  if (count >= 5) {
+  if(guessNumber == random) {
+    alert(`Tebrikler ${count}. denemede bildiniz`);
+  }else if (count >= 5) {
     alert("Üzgünüz bilemediniz 5 hakkınız doldu.");
     break;
   } else if (guessNumber > random) {
     alert("AZALT");
-  } else if (guessNumber < random) {
-    alert("ARTTIR");
   } else {
-    alert(`Tebrikler ${count}. denemede bildiniz`);
-  }
+    alert("ARTTIR");
+  } 
 } while (count < 5);
+
+
