@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: bisque;
+}
+h1{
+    text-align: center;
+    color: coral;
+    font-size: 4rem;
+}
+
+
+.left {
+    background-color: chocolate;
+    border: 2px solid coral;
+    float: left;
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+}
+.in{
+    clear: both;
+}
+.right{
+    background-color: chocolate;
+    border: 2px solid coral;
+
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    float:right;
+
+}
