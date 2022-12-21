@@ -16,7 +16,7 @@ body {
 img {
   width: 150;
   float: left;
-  width: 50%;
+  width: 150px;
 }
 div {
   border: 2px solid rgb(255, 255, 255);
@@ -41,4 +41,12 @@ h2 {
 }
 p{
     font-size: 16px;
+}
+.btn{
+  width: 120px;
+  height: 45px;
+  float: right;
+}
+.yazi{
+  float: right;
 }
