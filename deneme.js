@@ -11,10 +11,16 @@
 
 
 
-for (let x = 1; x <= 10; x++) {
-  if (x % 2 == 0) {
-    console.log(`${x}number is even`);
-  } else {
-    console.log(`${x}number is odd`);
-  }
+// for (let x = 1; x <= 10; x++) {
+//   if (x % 2 == 0) {
+//     console.log(`${x}number is even`);
+//   } else {
+//     console.log(`${x}number is odd`);
+//   }
+// }
+
+if(false==="false"){
+  console.log("false");
+}else{
+  console.log("değil");
 }
