@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Outline</title>
+    <style>
+      div > p {
+        text-align: center;
+        margin: 5rem;
+        border: 2px solid blueviolet;
+        outline: 2px dashed red;
+      }
+      .bip p {
+        text-align: center;
+        border: 2px solid blueviolet;
+        outline: dotted brown;
+      }
+      .bip + h1 {
+        /* text-align: center; */
+        width: 15rem;
+        height:15rem;
+        border: 10px solid red;
+        border-radius: 50%;
+        margin: auto;
+        padding-top: 5rem;
+        padding-left: 5rem;
+        text-align: center;
+      }
+      .bip + h1:hover {
+        outline: 30px dotted purple;
+
+        /* borderla arasına mesafe koy */
+        outline-offset: 5px; 
+        
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>lorem ipsum guguli horhor</p>
+    </div>
+
+    <div class="bip">
+      <p>lorem ipsum mopsalo guguli horhor</p>
+    </div>
+
+    <h1>Lorem ipsum dolor sit amet.</h1>
+  </body>
+</html>
