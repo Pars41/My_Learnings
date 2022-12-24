@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: white;
+    
+}
+.clc{
+    background-color: black;
+    /* border: 2px solid blue; */
+    width: 25%;
+    height: 100vh;
+    margin: 0 auto;
+    border-radius: 2rem;
+}
+i{
+    color: white;
+    padding: 0.2rem;
+    font-size: 7px;
+}
+.clear{
+    clear: both;
+}
+.app-menu{
+    /* border: 2px solid red; */
+    float: right;
+    margin-right: 1rem;
+    margin-top: 0.8rem;
+}
+
+.input, .output{
+    
+    margin: 1.7rem auto;
+    width: 100%;
+    height: 2rem;
+    outline:aqua;
+    background-color: black;
+    outline: none;
+    border: none;
+    
+
+}
+.buttons{
+    /* border: 2px solid fuchsia; */
+    background-color: #212224;
+    height: 28rem;
+    padding: 2rem;
+    
+    border-radius:2rem ;
+    
+}
+button{
+    margin: 0.5rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    border: none;
+    color: white;
+    background-color: #212224;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.322);
+    outline: 1px solid #2b2c2e;
+
+    
+}
+#c{
+    color: greenyellow;
+}
+.buttons i{
+    font-size: 1rem;
+}
+.blue i, .blue{
+    color: #317bf7;
+}
+.btn-6,.btn-5{
+    width: fit-content;
+}
+#eq{
+    height: 8rem;
+    float: right;
+}
+.btn-5{
+    float: left;
+}
+#eq button{
+    width: 3rem;
+    height: 7rem;
+    /* outline: none; */
+    border-top-left-radius:25px ;
+    border-top-right-radius:25px ;
+    border-bottom-left-radius:25px ;
+    border-bottom-right-radius:25px ;
+    margin-right: 13px;
+
+
+}
+#eq button i{
+    color: #317bf7;
+
+}
+.addition{
+    font-size: 1.5rem;
+}
+.minus{
+    font-size: 2rem;
+}
+button:hover{
+    box-shadow: 0 0 10px rgba(205, 204, 204, 0.322);
+
+}
+h1{
+    position: absolute;
+    top: 48%;
+    left: 5rem;
+    z-index: 1;
+}
