@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VH-VW</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            /* Viewport Height(Görünüm Yüksekliği) */
+            height: 100vh;
+        }
+        .div1{
+            background-color: green;
+            width: 50%;
+            /* body nin 50%si */
+            max-width: 400px;
+
+            /* body nin default yüksekliği olmadığından 50% çalışmaz */
+            height: 50%;
+        }
+        .div2{
+            background-color: tomato;
+            width: 50%;
+            /* div1 in 50%si */
+
+        }
+        .div3{
+            background-color: magenta;
+            /* width: 50%; */
+            /* div2 nin 50%si */
+
+            /* vw units parente değil direk tarayıcıya bağlıdır(tarayıcının görülebilir alanının 50%si gibi) */
+            width: 50vw;
+        }
+    </style>
+</head>
+<body>
+    <h1>VH-VW</h1>
+    <div class="div1">
+        div1
+        <div class="div2">
+            div2
+            <div class="div3">
+                div3
+            </div>
+        </div>
+    </div>
+</body>
+</html>
