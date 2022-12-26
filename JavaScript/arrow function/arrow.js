@@ -26,19 +26,24 @@
 // const calculateAge = (dgmyıl) => new Date().getFullYear() - dgmyıl;
 // console.log(calculateAge(1992));
 
-const fibo = n => {
-    let fib1 = 1,fib2 = 1,sum = 0;
-    for(let i = 3; i<=n; i++){
-        sum = fib1+fib2;
-        fib1 = fib2;
-        fib2 = sum;
-    }
-    if(n<=0){
-        console.log("n should be bigger than 0");
-    }else{
+// const fibo = n => {
+//     let fib1 = 1,fib2 = 1,sum = 0;
+//     for(let i = 3; i<=n; i++){
+//         sum = fib1+fib2;
+//         fib1 = fib2;
+//         fib2 = sum;
+//     }
+//     if(n<=0){
+//         console.log("n should be bigger than 0");
+//     }else{
 
-        console.log(`FİBONACCİ${n} = ${fib2}`);
-    }
+//         console.log(`FİBONACCİ${n} = ${fib2}`);
+//     }
     
-}
-fibo(1);
+// }
+// fibo(1);
+
+
+// RECURSION FUNCTION
+// Fonksiyonun kendisini çağırmasına recursiflik denir
+
