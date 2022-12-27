@@ -1,0 +1,136 @@
+
+.yazi{
+    text-align: center;
+    font-size: 2rem;
+    margin:2rem auto;
+    width: 50vw;
+}
+
+/* transform rotate */
+
+.yazi1{
+    background-color: rgba(178, 34, 34, 0.367);
+    transform: rotateX(180deg);
+}
+.yazi2{
+    background-color: rgba(34, 178, 51, 0.367);
+    transform: rotateY(50deg);
+}
+.yazi3{
+    background-color: rgba(204, 255, 0, 0.367);
+    transform: rotate(-8deg);
+    transform-origin: left center;
+}
+img{
+    margin-left: 15rem;
+    width: 150px
+
+}
+img:hover{
+    transform: rotate(-5deg);
+    width: 155px;
+    
+}
+
+
+/* transform scale */
+
+.yazi4{
+    background-color: rgba(0, 208, 255, 0.266);
+    transform: scaleX(0.8);
+}
+.yazi5{
+    background-color: rgba(51, 0, 255, 0.366);
+    transform: scaleY(1.8);
+}
+.yazi6:hover{
+    background-color: rgba(3, 0, 13, 0.451);
+    transform: scale(1.2);
+}
+.yazi6{
+    background-color: rgba(3, 0, 13, 0.451);
+    
+}
+
+/* traNSFORM translate */
+
+.otele1{
+width: 100px;
+height: 100px;
+float: left;
+background-color: rgb(26, 13, 13);
+transition-duration: 5s;
+}
+.otele2{
+width: 100px;
+height: 100px;
+float: left;
+background-color: rgb(148, 32, 32);
+transition-delay: 2s;
+}
+.otele3{
+width: 100px;
+height: 100px;
+float: left;
+background-color: rgb(187, 195, 33);
+transition: all 2s;
+}
+.otele4{
+width: 100px;
+height: 100px;
+float: left;
+background-color: rgb(97, 26, 197);
+transition: width 2s, background-color 2s;
+}
+.otele5{
+width: 100px;
+height: 100px;
+float: left;
+background-color: rgb(209, 70, 139);
+transition: all 5s;
+}
+
+.otele1:hover{
+transform: translateX(10px);
+background-color: chartreuse;
+    
+}
+.otele2:hover{
+ transform: translateY(30px);
+}
+.otele3:hover{
+    transform: translate(-80px,-80px);
+    width: 50px;
+    background-color: aqua;
+    border: 8px solid lightcoral;
+}
+.otele4:hover{
+    /* transform: translate(5px,2px); */
+    width: 130px;
+    background-color: darkorange;
+    
+
+}
+.otele5:hover{
+    background-color: crimson;
+    border-radius: 50%;
+}
+
+.btn-div{
+    text-align: center;
+    margin-top: 0;
+}
+.btn{
+    background-color: lightsalmon;
+    width: 180px;
+    height: 50px;
+    border-radius: 8px;
+    outline:15px solid rgb(209, 70, 139);
+    transition: all 2s;
+}
+.btn:hover{
+background-color: rgba(0, 0, 255, 0.445);
+border-radius: 20px;
+outline: 600px dashed rgba(211, 211, 211, 0.014);
+cursor: pointer;
+}
