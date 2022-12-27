@@ -3,33 +3,40 @@
     padding: 0;
     box-sizing: border-box;
 }
-div{
+.logo{
     display: inline-block;
-}
-div.left-img-ver{
-    width: 14%;
-    height: 100vh;
-    background-image: url(./img/sol.png);
-    background-size: cover;
-    opacity: 0.9;
-    background-position: bottom right ;
-    background-repeat: no-repeat;
-}
-div.mid{
-    width: 21%;
-    border: 1px solid yellowgreen;
-    height: 100vh;
-    background-color: black;
+    width: 200px;
+    height: 10rem;
 
 }
-div.main-img{
-    background-image: url(./img/main.png);
-    background-position: center ;
-    opacity: 0.9;
-    background-size: cover;
-    width: 65%;
-    height: 100vh;
+.nav{
+    border: 2px solid blue;
+
 }
-p{
-    color: aliceblue;
+.left-logo{
+    border: 2px solid red;
+    display: inline-block;
+    
+}
+.right{
+    /* border: 2px solid blue; */
+    /* display: inline-block; */
+    float: right;
+
+
+
+}
+.right-menü li{
+    display: inline-block;
+    /* border: 2px solid red; */
+    /* vertical-align: middle;        ?????? */
+    
+
+
+
+
+}
+.right-menü a{
+    text-decoration: none;
+    font-size: 0.8rem;
 }
