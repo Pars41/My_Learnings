@@ -126,7 +126,7 @@ background-color: chartreuse;
     height: 50px;
     border-radius: 8px;
     outline:15px solid rgb(209, 70, 139);
-    transition: all 2s;
+    transition: all 1s;
 }
 .btn:hover{
 background-color: rgba(0, 0, 255, 0.445);
