@@ -1,0 +1,40 @@
+.outer{
+    background-color:maroon;
+    width: 500px;
+    height: 500px;
+}
+.inner{
+    background-color: darkorange;
+    width: 50%;
+    height: 50%;
+    animation-name: travel;
+    animation-duration: 5s;
+}
+@keyframes travel {
+    0%{
+        transform: translate(0);
+    }
+    25%{
+        transform: translate(0,100%);
+        border-radius: 50%;
+        background-color: aqua;
+        padding: 50px;
+    }
+    35%{
+        width: 3500px;
+        background-color: darkkhaki;
+    }
+    50%{
+        transform: translate(100%,100%);
+        border-radius: 25%;
+        background-color: rgb(255, 0, 204);
+
+    }
+    75%{
+        transform: translate(100%);
+        border-radius: 50%;
+        border: 100px dotted lightgray;
+        margin: 150px;
+
+    }
+}    
