@@ -94,7 +94,7 @@ body{
 
 }
 .frnt:hover{
-    animation:hop 1s infinite alternate ;
+    animation:hop 2s infinite alternate ;
     
 }
 
@@ -218,16 +218,17 @@ body{
         transform: translate(0px,0px), rotate(0deg);
        
     }
+    
     25%{
-        transform: translate(0px,-55px) rotate(-3deg);
+        transform: translate(15px,8px) rotate(-3deg) rotateX(15deg);
         
     }
     50%{
-        transform: translate(0px,-100px) rotate(0deg);
+        transform: translate(10px,-100px) rotate(0deg);
 
     }
     75%{
-        transform: translate(0px,-55px) rotate(-6deg);
+        transform: translate(5px,10px) rotate(-6deg) rotateX(-10deg);
 
     }
     100%{
