@@ -27,3 +27,15 @@ console.log(str5[18],str5[19],str5[20],str5[21],str5[22]);
 
 
 console.log(str5[str5.length-1]);
+
+
+let str = 'You do not KNOW what you do not know until you know.'
+let arry = [];
+for(let i= 0 ; i<str.length; i++){
+    if(str[i] === "o"){
+        arry.push(i);
+    }
+}
+console.log(arry);
+
+str.indexOf()

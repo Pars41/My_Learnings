@@ -6,3 +6,6 @@ sonuc = "kaldırımlar \t çok dar"
 sonuc = "balinalar\0hayli zayıf"
 sonuc = "havalar orda soğuk mu \\ sıcak  mı?"
 console.log(sonuc);
+
+
+
