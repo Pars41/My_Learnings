@@ -10,3 +10,7 @@ console.log(typeof names);
 
 const codingLangs = new Array("C","C++","JS","GO") 
 console.log(codingLangs);
+
+//3.Yöntem (Array.of())
+const arr = Array.of(3)
+console.log(arr);
