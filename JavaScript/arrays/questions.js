@@ -39,16 +39,14 @@ function nearestPalindrom(numb) {
   } else {
     let count = 0;
     let pNearest = 0;
-
     for (i = numb - 1; i > 0; i--) {
       count++;
       if (i === Number(i.toString().split("").reverse().join(""))) {
         pNearest += i;
-        console.log(count,pNearest);
         break;
       }
     }
-    for (i = numb + 1; i < numb+count; i++) {
+    for (i = numb + 1; i < numb + count; i++) {
       if (i === Number(i.toString().split("").reverse().join(""))) {
         pNearest = i;
         break;
@@ -59,4 +57,3 @@ function nearestPalindrom(numb) {
 }
 
 nearestPalindrom(numb);
-
