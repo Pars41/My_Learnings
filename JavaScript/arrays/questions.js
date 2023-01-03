@@ -38,24 +38,25 @@ function nearestPalindrom(numb) {
     console.log("Nearest palindrome number is 0.");
   } else {
     let count = 0;
+    let pNearest = 0;
+
     for (i = numb - 1; i > 0; i--) {
-      let pNearest = 0;
       count++;
       if (i === Number(i.toString().split("").reverse().join(""))) {
         pNearest += i;
-        console.log(count);
+        console.log(count,pNearest);
         break;
       }
     }
-    for (i = numb + 1; i < i + count; i++) {
+    for (i = numb + 1; i < numb+count; i++) {
       if (i === Number(i.toString().split("").reverse().join(""))) {
         pNearest = i;
-         break;
+        break;
       }
     }
     console.log(`Nearest palindrome is ${pNearest}`);
   }
 }
 
-nearestPalindrom(10);
+nearestPalindrom(numb);
 
