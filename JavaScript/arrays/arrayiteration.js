@@ -1,4 +1,3 @@
-// ARRAY ITERATION ///
 
 
 const numbers = [3,5,2,"4","four",3,"4","bes","1"]
@@ -37,3 +36,16 @@ console.log(now);    //[ '04.01.2023 20:36:57' ]
 
 const concattedMsg = message.concat(now, "is'nt it Yusuf",[[1,2,3]])
 console.log(concattedMsg);
+
+
+//ARRAY ITERATION*******************
+
+// FOR LOOP 
+const grades = [55,77,23,89,100,98]
+let sum = 0
+
+for(let i = 0; i<grades.length; i++){
+   sum += grades[i]
+
+}
+console.log((sum/grades.length).toFixed(2));
