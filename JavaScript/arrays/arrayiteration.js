@@ -20,5 +20,9 @@ data = data.sort((a,b)=> b-a).join()
 console.log(data);
 
 // toString()
-
 console.log(numbers.toString());
+
+// slice(start,end) --end exclusive
+const cars = ["bmw","mercedes","fiat","anadol"]
+console.log(cars.slice(2,3));
+console.log(cars.slice(2)); //tek rakam başlangıç anlamında ve sonuna kadar alır
