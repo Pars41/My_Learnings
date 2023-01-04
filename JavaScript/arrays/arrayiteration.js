@@ -61,6 +61,10 @@ console.log(negative);
 console.log(positive);
 console.log(arr);
 
+
+
+// for in
+
 const students = ["ahmet", "mehmet", "ismet", "ahmet", "can", "mehmet", "cem"];
 
 const findStudent = (name) => {
@@ -78,3 +82,16 @@ const findStudent = (name) => {
 };
 
 console.log(findStudent("mehmet"));
+
+
+
+
+// for of
+const findStudentForOf = (name)=>{
+    let counterr= 0
+    for(let student of students){
+        student === name.toLowerCase() ? counterr++ : null
+        // name===student && counter++      =====>  short circuit yöntemi
+        // name!==student || counter++      =====>  short circuit yöntemi
+    }
+}
