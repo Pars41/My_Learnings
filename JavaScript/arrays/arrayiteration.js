@@ -63,7 +63,7 @@ console.log(arr);
 
 
 
-// for in
+// for in**********
 
 const students = ["ahmet", "mehmet", "ismet", "ahmet", "can", "mehmet", "cem"];
 
@@ -86,12 +86,15 @@ console.log(findStudent("mehmet"));
 
 
 
-// for of
+// for of***********
+
 const findStudentForOf = (name)=>{
     let counterr= 0
     for(let student of students){
         student === name.toLowerCase() ? counterr++ : null
-        // name===student && counter++      =====>  short circuit yöntemi
-        // name!==student || counter++      =====>  short circuit yöntemi
+        // name===student && counter++      =====>  short circuit yöntemi(koşul true ise &&)
+        // name!==student || counter++      =====>  short circuit yöntemi(koşul false ise ||)
     }
+    return !counterr ? `${name} can not be found` : `${name} found ${counterr} times`
 }
+console.log(findStudentForOf("ahmet"));
