@@ -35,7 +35,6 @@ console.log(now); //[ '04.01.2023 20:36:57' ]
 const concattedMsg = message.concat(now, "is'nt it Yusuf", [[1, 2, 3]]);
 console.log(concattedMsg);
 
-//ARRAY ITERATION*******************
 
 // FOR LOOP
 const grades = [55, 77, 23, 89, 100, 98];
