@@ -69,11 +69,11 @@ const findStudent = (name) => {
     if (name === students[i]) {
       counter++;
     }
-    if (counter === 0) {//veya !counter)
-      return `${name} can not be found`;
-    }else{
-        return `${name} found ${counter} times`
-    }
+  }
+  if (counter === 0) {
+    return `${name} can not be found`;
+  } else {
+    return `${name} found ${counter} times`;
   }
 };
 
