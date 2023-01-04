@@ -49,3 +49,19 @@ for(let i = 0; i<grades.length; i++){
 
 }
 console.log((sum/grades.length).toFixed(2));
+
+
+const arr = [-5,15,22,-4,45,78]
+let negative = []
+let positive = []
+for(let j= 0 ; j<arr.length; j++){
+    if(arr[j]< 0){
+        negative.push(arr[j])
+    }else{
+        positive.push(arr[j])
+    }
+}
+
+console.log(negative);
+console.log(positive);
+console.log(arr);
