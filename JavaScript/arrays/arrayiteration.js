@@ -25,4 +25,15 @@ console.log(numbers.toString());
 // slice(start,end) --end exclusive
 const cars = ["bmw","mercedes","fiat","anadol"]
 console.log(cars.slice(2,3));
-console.log(cars.slice(2)); //tek rakam başlangıç anlamında ve sonuna kadar alır
+console.log(cars.slice(2));    //tek rakam başlangıç anlamında ve sonuna kadar alır
+
+const newCars = cars.slice(3,4)
+console.log(newCars,cars);
+
+// concat()
+const message = ["The weather is very nice"]
+const now = [new Date().toLocaleString()]
+console.log(now);    //[ '04.01.2023 20:36:57' ]
+
+const concattedMsg = message.concat(now, "is'nt it Yusuf",[[1,2,3]])
+console.log(concattedMsg);
