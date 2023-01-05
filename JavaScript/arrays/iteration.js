@@ -31,3 +31,7 @@ let names = ["Mustafa", "Murat", "Ahmet", "Mustafa", "Ayşe", "Canan"];
 const upperNames = names.map((n) => n.toLocaleUpperCase())
 console.log(upperNames,names);
 // map() metodu return eder
+
+
+
+// yusuf aydos
