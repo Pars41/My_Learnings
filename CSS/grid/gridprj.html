@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GriD</title>
+  </head>
+  <style>
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+
+    }
+    .container{
+        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 250px 1fr 4fr 1fr;
+        text-align: center;
+    }
+    header{
+        grid-column: span 12;
+    }
+    header img{
+        width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+    nav{
+        grid-column: span 12;
+        background-color: aquamarine;
+
+    }
+    aside{
+        grid-column: span 3;
+        background-color: fuchsia;
+    }
+    main{
+        grid-column: span 9;
+        background-color: tomato;
+
+    }
+    footer{
+        grid-column: span 12;
+        background-color: lightgreen;
+
+    }
+
+  </style>
+  <body>
+    <div class="container">
+      <header> <img
+        src="https://cdn.pixabay.com/photo/2016/05/11/13/20/keyboard-1385706_960_720.jpg"
+        alt=""
+      /></header>
+      <nav>nav</nav>
+
+      <aside>
+        <ul>
+          <li>menu1</li>
+          <li>menu2</li>
+          <li>menu3</li>
+          <li>menu4</li>
+        </ul>
+      </aside>
+      <main>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae deserunt
+        quisquam tempore doloremque sunt quas sapiente iusto aperiam laboriosam
+        suscipit perspiciatis aspernatur, aut eos tempora vitae corporis facere
+        voluptas assumenda illo earum, veritatis reprehenderit voluptatibus
+        dolores! Excepturi cumque voluptas officiis ad sunt. Quas eligendi quod
+        dolorum voluptate, reprehenderit quo iste.
+      </main>
+      <footer>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae
+        aspernatur reiciendis ut et doloribus numquam exercitationem, commodi
+        repellat amet laboriosam voluptates dignissimos voluptate sed quae
+        excepturi, tempora illum, temporibus totam magni perferendis
+        accusantium! Dicta beatae nostrum, earum quisquam, eum, iusto expedita
+        ipsam natus quibusdam quidem soluta esse officia asperiores
+        exercitationem?
+      </footer>
+    </div>
+  </body>
+</html>
