@@ -73,3 +73,14 @@ team.forEach((person,i)=>{
     console.log("AGE:",age);
     console.log("***********");
 })
+
+//functionun döndürdüğü obje doğrudan destr edilebilir
+
+const getInfo = () => {
+    return {
+        ids: new Date().getTime(),
+        productname: "mac"
+    }
+}
+const {productname,ids} = getInfo()
+console.log(ids);
