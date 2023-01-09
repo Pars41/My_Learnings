@@ -15,4 +15,7 @@ const cars = {
 
 const { car1, car2 } = cars;
 
-console.log(car1);
+console.log(car1,car2);
+ const { name: nameCar1, engine: engineCar1}= car1 ;
+ const { name: nameCar2, engine: engineCar2}= car2 ;
+ console.log(nameCar1,engineCar2);
