@@ -25,3 +25,6 @@ const { car1, car2 } = cars;
 const { car1:{name}, car2:{model} } = cars;
 
 console.log(name,model);
+
+const model2 = cars.car1.model
+console.log(model2);
