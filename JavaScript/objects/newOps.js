@@ -95,3 +95,11 @@ const mehmet = names[1] //* indexing
 
 const [p1, p2, , p4] = names
 console.log(p1, p2, p4)
+
+
+
+//rest(.....)
+
+const auto = ["anadol","reno","bmw","mercedes","ferrari"]
+const [x,y, ...z] =auto;
+console.log(z)
