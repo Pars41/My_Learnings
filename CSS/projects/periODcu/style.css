@@ -23,6 +23,29 @@ header {
   justify-content: space-between;
   margin-top: 1rem;
 }
+.groups{
+  position: absolute;
+  width: 47rem;
+  height: 7.7rem;
+  background-color:#232a39 ;
+  top: 9.7rem;
+  left: 15rem;
+  border-radius: 0.3rem;
+  display: flex;
+  font-size: 0.5rem;
+  justify-content: space-around;
+
+}
+.groups h4{
+  background-color: #1a1f2a;
+  margin-top: 0.1rem;
+  width: 8rem;
+  text-align: center;
+  border-radius: .2rem;
+  padding: .1rem;
+  font-weight: 100;
+
+}
 
 .nav-left {
   display: flex;
@@ -180,6 +203,9 @@ header {
 }
 .dturk {
   color: #80d5ff;
+}
+.baslik{
+  color: #ffcd03;
 }
 
 @keyframes fliker {
