@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #1a1f2a;
+  font-family: "Prompt", sans-serif;
+  position: relative;
+}
+.container-main {
+  margin: 0rem 11rem;
+}
+.container-main a {
+  text-decoration: none;
+}
+.table-container {
+  margin: 0rem 5rem;
+  position: relative;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.nav-left:hover {
+  transform: scale(1.01);
+  cursor: pointer;
+}
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.nav-left h1 {
+  color: #ffcd03;
+  font-size: 2rem;
+}
+.nav-left .od {
+  font-size: 2.3rem;
+}
+
+.nav-right ul {
+  color: #ffcd03d1;
+}
+.nav-right li {
+  display: inline-block;
+  margin: 0.3rem;
+  font-size: 1.2rem;
+}
+.nav-left .by {
+  color: #ffffff;
+  font-size: 1.3rem;
+}
+.seperator {
+  font-size: 2rem;
+}
+.nav-right img {
+  width: 4.3rem;
+}
+.nav-right li,
+.nav-right img {
+  border: 1px solid #232a38;
+  border-radius: 0.5rem;
+  padding: 0.2rem 1rem;
+}
+.nav-right li:hover,
+.nav-right img:hover {
+  border: 1px solid rgba(245, 222, 179, 0.461);
+  color: #ffffff;
+  cursor: pointer;
+}
+#atom {
+  width: 22rem;
+  padding: 0.4rem;
+  position: absolute;
+  right: 5.5rem;
+  top: 1rem;
+  background-color: #1a1f2a;
+  border: none;
+  outline: 1px solid rgba(245, 222, 179, 0.197);
+  border-radius: 0.4rem;
+  color: #ffffff;
+}
+
+.table {
+  display: grid;
+  margin-top: 2rem;
+  gap: 0.2rem;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+  /* font-size: 0.6rem; */
+  font-size: 1.7rem;
+}
+.table div {
+  background-color: #232a39;
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  width: 4.6rem;
+  height: 4rem;
+  /* color: white; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  position: relative;
+}
+.table div:hover {
+  outline: 1px solid #ffcd037e;
+  /* transform: scale(2.5) translate(0,-20px); */
+  z-index: 2;
+  animation: fliker 3s ease-out infinite;
+  animation-iteration-count: 1;
+  animation-delay: 0.1s;
+}
+.first {
+  grid-column: 1 / span 17;
+}
+.four {
+  grid-column: 2 / span 11;
+}
+.sr {
+  grid-column: 2 / span 2;
+}
+
+.uue {
+  grid-column: 1 / span 3;
+}
+.ac {
+  grid-column: 4 / span 1;
+}
+
+.table div span.numb {
+  position: absolute;
+  top: 0;
+  left: 0.2rem;
+  font-size: 0.6rem;
+}
+.table div span.exp {
+  position: absolute;
+  bottom: 0;
+  left: 0.2rem;
+  font-size: 0.6rem;
+}
+
+/* colors */
+
+.org {
+  color: #ffaf80;
+}
+.pink {
+  color: #ff80d4;
+}
+.purp {
+  color: #aa80ff;
+}
+.turk {
+  color: #80fffc;
+}
+.grn {
+  color: #66c079;
+}
+.lgrn {
+  color: #c3ff80;
+}
+.wh {
+  color: #ffffff;
+}
+.yllw {
+  color: #ffef80;
+}
+.rblue {
+  color: #8095ff;
+}
+.dturk {
+  color: #80d5ff;
+}
+
+@keyframes fliker {
+  100% {
+    transform: scale(2) translate(0, -20px);
+    outline: 1px solid tomato;
+    background-color: #232a3980;
+  }
+}
+
+/* FLAMEEE */
+.red {
+  width: 2rem;
+  height: 2rem;
+  background: orangered;
+  box-shadow: 0rem 0rem 0.1rem 0.5rem orangered;
+}
+.orange {
+  width: 1.6rem;
+  height: 1.6rem;
+  background: orange;
+  left: 0.2rem;
+  box-shadow: 0rem 0rem 1.2rem 0.6rem orange;
+}
+.gold {
+  width: 1.4rem;
+  height: 1.4rem;
+  background: gold;
+  left: 0.3rem;
+  box-shadow: 0rem 0rem 0.9rem 0.4rem gold;
+}
+.white {
+  width: 1.2rem;
+  height: 1.2rem;
+  background: lightyellow;
+  left: 0.4rem;
+  box-shadow: 0rem 0rem 0.9rem 0.4rem lightyellow;
+}
+.flame-wrapper {
+  /* width: 18px; */
+  position: absolute;
+  animation: flicker 3ms ease-in infinite;
+  /* margin-top: 45rem; */
+  left: 8rem;
+  top: 2.8rem;
+  opacity: 0.8;
+}
+.flame-wrapper:hover {
+  opacity: 0.6;
+  animation: fliccccker 3ms ease-in infinite ;
+}
+.flame {
+  bottom: 0;
+  position: absolute;
+  border-radius: 50% 0% 50% 50%;
+  transform: rotate(-45deg);
+}
+
+@keyframes flicker {
+  0% {
+    transform: rotate(-1deg);
+  }
+  20% {
+    transform: rotate(2deg) scaleY(1.05);
+  }
+  40% {
+    transform: rotate(-1deg);
+  }
+  60% {
+    transform: rotate(1deg);
+  }
+  80% {
+    transform: rotate(-1deg) scaleY(0.9);
+  }
+  100% {
+    transform: rotate(1deg);
+  }
+}
+
+@keyframes fliccccker {
+  0% {
+    transform: rotate(-40deg) rotateY(10deg);
+  }
+  20% {
+    transform: rotate(-36deg) scaleY(.95) rotateY(5deg);
+  }
+  40% {
+    transform: rotate(-40deg) rotateY(10deg);
+  }
+  60% {
+    transform: rotate(-36deg) rotateY(5deg);
+  }
+  80% {
+    transform: rotate(-40deg) scaleY(0.7) rotateY(10deg);
+  }
+  100% {
+    transform: rotate(-36deg) rotateY(5deg);
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  #atom {
+    display: none;
+  }
+}
+@media screen and (max-width: 1100px) {
+  header {
+    flex-direction: column;
+  }
+}

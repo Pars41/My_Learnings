@@ -9,3 +9,7 @@ const h4 = document.querySelector("h4")
 h4.after(newPar)
 
 altp.style.color = "tomato"
+altp.className = "center"
+document.querySelector(".center").style.color = "yellow"
+const yusuf = altp.nextSibling.textContent.split("")
+console.log(yusuf[7].text)
