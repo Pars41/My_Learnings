@@ -1,4 +1,3 @@
-const yourChoice = document.getElementById("your-choice")
 
 // const tasImage = document.querySelector(".tas")
 // const kagitImage = document.querySelector(".kagit")
@@ -15,6 +14,11 @@ const yourChoice = document.getElementById("your-choice")
 //     yourChoice.innerHTML = '<img src="./assets/makas.png"></img>'
 // })
 let userSelect;
+let pcRandom; 
+
+
+const yourChoice = document.getElementById("your-choice")
+const pcChoice = document.getElementById("pc-choice")
 const select = document.querySelector(".select")
 
 
@@ -24,5 +28,19 @@ select.addEventListener("click", (e)=>{
     // yourChoice.innerHTML = e.target.getAttribute("alt")
     userSelect = e.target.getAttribute("alt")
     yourChoice.innerHTML = `<img src="./assets/${userSelect}.png"></img>`;
-    console.log(yourChoice,userSelect)
+    // console.log(yourChoice,userSelect)
+    pc()
 })
+
+const pcArr = ["tas","kagit","makas"]
+
+function pc(){
+    pcRandom = pcArr[Math.floor(Math.random()*3)]
+    console.log(pcRandom)
+    pcChoice.innerHTML  = `<img src="./assets/${pcRandom}.png"></img>`
+    result()
+}
+
+function result(){
+    
+}
