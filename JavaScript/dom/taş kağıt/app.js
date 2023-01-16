@@ -13,6 +13,11 @@
 // makasImage.addEventListener('click',()=>{
 //     yourChoice.innerHTML = '<img src="./assets/makas.png"></img>'
 // })
+
+
+
+//değişkenler variables
+
 let userSelect;
 let pcRandom; 
 
@@ -26,21 +31,24 @@ select.addEventListener("click", (e)=>{
     // console.log(e.target.className);
     // console.log(e.target.getAttribute("alt"));
     // yourChoice.innerHTML = e.target.getAttribute("alt")
-    userSelect = e.target.getAttribute("alt")
+    if(e.target.getAttribute("alt")){ //boşlukta null çıkmasın deyu
+        userSelect = e.target.getAttribute("alt")
     yourChoice.innerHTML = `<img src="./assets/${userSelect}.png"></img>`;
     // console.log(yourChoice,userSelect)
     pc()
+    }
+    
 })
 
 const pcArr = ["tas","kagit","makas"]
 
 function pc(){
     pcRandom = pcArr[Math.floor(Math.random()*3)]
-    console.log(pcRandom)
+    // console.log(pcRandom)
     pcChoice.innerHTML  = `<img src="./assets/${pcRandom}.png"></img>`
     result()
 }
 
 function result(){
-    
+
 }
