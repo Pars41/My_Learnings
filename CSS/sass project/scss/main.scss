@@ -4,4 +4,24 @@
 
 @import "./components/footer", "./components/nav", "./components/responsive";
 
-@import "./pages/about", "./pages/contact", "./pages/home", "./pages/projects"
+@import "./pages/about", "./pages/contact", "./pages/home", "./pages/projects";
+
+
+body{
+    font-family: $font-family;
+    line-height: 2rem;
+    color: $text-color;
+    height: 100vh;
+
+
+}
+a{
+    text-decoration: none;
+    color: $text-color;
+}
+
+h1,h2,h3{
+    font-weight: 400;
+
+}
+
