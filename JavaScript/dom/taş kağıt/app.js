@@ -23,12 +23,16 @@ const select = document.querySelector(".select");
 
 const scoreYou = document.getElementById("you");
 const scorePc = document.getElementById("pc");
+const domTopScore = document.querySelector(".top-score")
 
 // Modal Selectors
 const resultDiv = document.querySelector(".result-msg");
 const containerEl = document.querySelector(".container");
 const modalEl = document.querySelector(".modal-container");
 const modalBtn = document.querySelector("#modal-ok");
+
+//sonuc mesajı
+const final = document.getElementById("final");
 
 select.addEventListener("click", (e) => {
   // console.log(e.target.className);
@@ -81,13 +85,22 @@ function result() {
     default:
       break;
   }
-  if(userSelect == pcRandom){
+  if (userSelect == pcRandom) {
     resultDiv.classList.add("active");
     resultDiv.innerHTML = "It's a draw";
     containerEl.style.boxShadow = "3px 3px 10px 1px #FFC538";
     resultDiv.style.backgroundColor = "#FFC538";
-  
   }
+  if (scoreYou.innerText == 10) {
+    final.innerHTML = `💃 You Win🕺`;
+    document.querySelector(".modal").style.backgroundColor = "#5AB7AC";
+    modalBtn.style.color = "#5AB7AC";
+    topScoreCheck();
+  }
+  if (scorePc.innerText == "10" || scoreYou.innerText == "10") {
+    modal();
+  }
+  
 }
 
 function lost() {
@@ -106,3 +119,36 @@ function win() {
   scoreYou.innerText++;
 }
 
+// modal kullanımı
+function modal() {
+  modalEl.classList.add("show");
+}
+
+modalBtn.addEventListener("click", () => {
+  modalEl.classList.remove("show");
+
+  // modalEl.style.display = "none";
+
+  window.location.reload();
+});
+
+
+let storagedScore = localStorage.getItem("highScore")
+
+let topScore;
+
+if(storagedScore){
+    topScore = `10 - ${storagedScore}`
+}else{
+    topScore = "0 -0"
+}
+
+
+domTopScore.innerText = topScore
+
+function topScoreCheck(){
+    storagedScore || localStorage.setItem("highScore", +scorePc.innerText)
+    if(storagedScore >= scorePc.innerText){
+        localStorage.setItem("highScore", +scorePc.innerText)
+    }
+}

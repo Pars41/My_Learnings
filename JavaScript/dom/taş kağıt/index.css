@@ -5,6 +5,9 @@
   padding: 0 px;
   margin: 0 px;
 }
+main{
+  margin-top: 2rem;
+}
 body {
   background-color: #121212;
   font-family: "Comfortaa", cursive;
@@ -17,7 +20,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 3px 3px 10px 1px #aeadbb98;
+  box-shadow: 3px 3px 10px 10px #aeadbb98;
   border-radius: 5px;
   width: 50%;
   margin: auto;
