@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-dO</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      display: flex;
+      color: white;
+    }
+    
+    .img,
+    .left {
+      background-image: url("2ed9cd56a598886fa129db5ad280860e.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.9;
+      
+      width: 50%;
+      height: 100vh;
+    }
+    .to-do {
+      width: 50%;
+    }
+    .left{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .app {
+      background-color: blue;
+      height: 85vh;
+      width: 80%;
+      border-radius: 2%;
+      border-top-left-radius: 10%;
+      border-top-right-radius: 10%;
+      
+    }
+    .list{
+        list-style-type: none;
+    }
+    .header{
+        background-color: #add21b;
+        text-align: center;
+        border-top-left-radius: .9rem;
+        border-top-right-radius: .9rem;
+    }
+    ul{
+      overflow:-moz-hidden-unscrollable
+
+    }
+    .header h1{
+        font-size: 5rem;
+        color: black;
+    }
+    #task-input{
+        width: 70%;
+        padding: .5rem;
+        border-radius: .3rem;
+        border: none;
+        margin-bottom: 2rem;
+        margin-top: 1rem;
+        margin-right: .5rem;
+    }
+    .addBtn{
+        background-color: black;
+        border-radius: .3rem;
+        border-bottom: 1px solid white;
+        padding: .45rem;
+
+    }
+    .addBtn:hover{
+        background-color: white;
+        color: black;
+        font-weight: 800;
+        cursor: pointer;
+        border-bottom: 1px solid black;
+
+    }
+    .list li{
+        margin: 1rem;
+        background-color:coral ;
+        color: black;
+        padding: .4rem;
+    }
+    .close{
+        float: right;
+        background-color: antiquewhite;
+        padding-left: .3rem;
+        padding-right: .3rem;
+    }
+    .close:hover{
+        cursor: pointer;
+        background-color: blueviolet;
+    }
+
+    @media  screen and (max-width:750px ) {
+        body{
+            flex-direction: column;
+        }
+        .left,.img{
+            width: 100%;
+        }
+    }
+  </style>
+  <body>
+    <div class="left">
+      <div class="app">
+        <div class="header" id="to-do">
+          <h1>..To dO..</h1>
+          <input type="text" id="task-input" placeholder="Tasks.." />
+          <span onclick="newElement()" class="addBtn">ADD</span>
+        </div>
+        <ul class="list" id="list">
+          <li>aedbmapieprtogbhoapedrfvg</li>
+          <li>bhnsytrjmkıuyrlktrı</li>
+          <li>srtykıulöçfyıl</li>
+          <li>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+          </li>
+          <li>debitis voluptatem quos nemo, facilis assumenda?</li>
+        </ul>
+      </div>
+    </div>
+    <div class="img"></div>
+
+    <script>
+       var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+
+// Click on a close button to hide the current list item
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+
+// Add a "checked" symbol when clicking on a list item
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+
+// Create a new list item when clicking on the "Add" button
+function newElement() {
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("task-input").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("list").appendChild(li);
+  }
+  document.getElementById("task-input").value = "";
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+} 
+    </script>
+  </body>
+</html>
