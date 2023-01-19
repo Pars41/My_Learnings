@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="checkout.css" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+        padding: 0;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.7rem;
+      }
+      header {
+        font-size: 1.8rem;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+      main {
+        background-color: rgba(240, 212, 171, 0.247);
+        padding: 2rem;
+        /* margin: 1rem 5rem; */
+        border-radius: 1rem;
+      }
+      img {
+        width: 10rem;
+        margin-right: 1.5rem;
+        border-radius: 1rem;
+      }
+      section {
+        display: flex;
+        /* border: 2px solid red; */
+        margin-bottom: 1rem;
+      }
+      .inform {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+        /* justify-content:  */
+      }
+      .inform h3 + p {
+        color: orange;
+        font-size: 1.5rem;
+      }
+      .inform span {
+        font-size: 1rem;
+        color: black;
+      }
+      .buton {
+        display: flex;
+        border: 1.3px solid rgba(128, 128, 128, 0.685);
+        border-radius: 0.3rem;
+      }
+      .buton :hover {
+        cursor: pointer;
+      }
+      .plus-neg {
+        padding: 0.25rem;
+        /* background-color: blue; */
+        width: 1.5rem;
+        margin: 0.1rem auto;
+        border: none;
+        font-size: 1rem;
+        font-weight: 600;
+      }
+      .remove {
+        background-color: brown;
+        padding: 0.2rem;
+        width: 4rem;
+        color: white;
+        border: none;
+        border-radius: 0.3rem;
+      }
+      footer span {
+        float: right;
+        /* text-align: justify; */
+      }
+      footer p {
+        border-top: 1px solid rgba(56, 53, 48, 0.425);
+        margin-top: 0.5rem;
+      }
+      input {
+        width: 3rem;
+        background-color: rgba(240, 212, 171, 0.096);
+        border: none;
+        text-align: center;
+        font-weight: 900;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <header><h1>Checkout</h1></header>
+    </section>
+    <main>
+      <section class="first_section">
+        <div class="img img1">
+          <img src="../TW-09/image/photo1.png" alt="" />
+        </div>
+
+        <div class="inform bag">
+          <h3>Vintage Backbag</h3>
+          <p>
+            $25.98 <span> <del>$34.99</del></span>
+          </p>
+          <div class="buton">
+            <button class="plus-neg negative">-</button
+            ><input type="text" value="1" /><button class="plus-neg plus">
+              +</button
+            ><br />
+          </div>
+          <button class="remove">Remove</button>
+          <p class="ayt">
+            Product Total: <span id="bag-total" class="product-total bag-total">$25.98</span>
+          </p>
+        </div>
+      </section>
+
+      <section class="second_section">
+        <div class="img img2"><img src="/TW-09/image/photo2.png" alt="" /></div>
+        <div class="inform shoes">
+          <h3>Levi Shoes</h3>
+          <p>
+            $45.99<span> <del>$54.99</del></span>
+          </p>
+          <div class="buton">
+            <button class="plus-neg negative">-</button>
+            <input type="text" value="1" /><button class="plus-neg plus">
+              +
+            </button>
+            <br />
+          </div>
+          <button class="remove">Remove</button>
+          <p>
+            Product Total: <span class="product-total shoes-total">$45.99</span>
+          </p>
+        </div>
+      </section>
+      <section class="third_section">
+        <div class="img img3"><img src="/TW-09/image/photo3.jpg" alt="" /></div>
+        <div class="inform clock">
+          <h3>Antique Clock</h3>
+          <p>
+            $74.99 <span> <del>$94.99</del></span>
+          </p>
+          <div class="buton">
+            <button class="plus-neg negative">-</button
+            ><input type="text" value="1" /><button class="plus-neg plus">
+              +
+            </button>
+            <br />
+          </div>
+          <button class="remove">Remove</button>
+          <p >
+            Product Total: <span class="product-total clock-total">$74.99</span>
+          </p>
+        </div>
+      </section>
+      <footer class="price">
+        <p>Subtotal <span id="subtotal" class="subtotal2"> $146.96</span></p>
+        <p>Tax(%18) <span class="tax">$26.45</span></p>
+        <p>Shipping <span>$15.00</span></p>
+        <p>Total <span class="">$188.41</span></p>
+      </footer>
+    </main>
+
+    <script>
+      let negative = document.querySelector(".buton .negative");
+      // console.log(negative);
+      let positive = document.querySelector(".plus");
+      // console.log(positive);
+      let input = document.querySelector("input");
+      let bagTotal = document.getElementsByClassName("ayt");
+      
+
+
+      negative.addEventListener("click", function () {
+        if (input.value >= 1) {
+          input.value--;
+          document.getElementById("bag-total").innerHTML = `${(25.98*Number(input.value)).toFixed(2)}`;
+          let subtotal = document.getElementById("subtotal")
+          subtotal.innerText = `${(Number(((25.98*Number(input.value)).toFixed(2))) + Number(120.98)).toFixed(2)}`
+
+
+        }
+      });
+      positive.addEventListener("click", function () {
+        input.value++;
+        document.getElementById("bag-total").innerHTML = `${(25.98*Number(input.value)).toFixed(2)}`;
+        let subtotal = document.getElementById("subtotal")
+        subtotal.innerText = `${(Number(((25.98*Number(input.value)).toFixed(2))) + Number(120.98)).toFixed(2)}`
+
+      });
+      let subtotal = document.getElementById("subtotal")
+      subtotal.innerText = `${(Number(((25.98*Number(input.value)).toFixed(2))) + Number(120.98)).toFixed(2)}`
+    </script>
+  </body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #f8b195;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+      }
+      .main {
+        /* background-color: #355c7d; */
+        margin: 3rem 10rem;
+        height: 65vh;
+        border-radius: 1rem;
+        width: 50vw;
+        min-width: 350px;
+
+      }
+      .tasks li {
+        list-style-type: none;
+        padding: 1rem;
+        color: white;
+        position: relative;
+        text-align: center;
+      }
+      ul li.checked {
+        text-decoration: line-through;
+      }
+      .tasks li.checked::before {
+        content: " ";
+        position: absolute;
+        border-right: 2px solid white;
+        border-bottom: 2px solid white;
+        transform: rotate(45deg);
+        top: 10px;
+        left: 16px;
+        height: 15px;
+        width: 7px;
+        margin-right: 2rem;
+      }
+      h1 {
+        color: #f67280;
+        font-size: 3rem;
+        font-weight: 900;
+        text-shadow: 5px 5px 5px rgba(0,0,0,0.6);
+      }
+      header {
+        text-align: center;
+        padding: 2rem;
+        background-color: #355c7d;
+        
+        border-top-right-radius: 1rem;
+        border-top-left-radius: 1rem;
+      }
+      header input {
+        width: 60%;
+        padding: 0.5rem;
+        border: none;
+        border-radius: 5rem;
+        cursor: pointer;
+      }
+      span:hover{
+        cursor: pointer;
+        
+        transform: scale(2);
+        color: tomato;
+      }
+      button {
+        padding: 0.5rem;
+        margin-top: 1rem;
+        border-radius: 1rem;
+        border: none;
+        width: 15%;
+      }
+      button:hover {
+        background-color: #f8b195;
+        color: white;
+        cursor: pointer;
+      }
+      li:nth-child(even) {
+        background: #74d686;
+      }
+      li:nth-child(odd) {
+        background: #c06c84;
+      }
+      li:nth-child(even):hover {
+        background: #6c5b7b;
+        cursor: pointer;
+        font-weight: 900;
+        transform: scale(1.06);
+        z-index: 1;
+        border-radius: .5rem;
+
+      }
+      li:nth-child(odd):hover {
+        background: #6c5b7b;
+        cursor: pointer;
+        font-weight: 900;
+        transform: scale(1.06);
+        z-index: 1;
+        border-radius: .5rem;
+
+
+      }
+      .kapat {
+        position: relative;
+      }
+      .kapat span {
+        float: right;
+        position: absolute;
+        right: 0.5rem;
+      }
+      li:last-child{
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <header>
+        <h1>To Do List</h1>
+        <input type="text" id="input" placeholder="Please enter tasks..."/>
+        <button>Add</button>
+      </header>
+      <div class="tasks">
+        <ul class="tasks-ul">
+          <li>My breakfast</li>
+          <li>Email processing</li>
+          <li>meditation</li>
+          <li>code, code, code</li>
+          <li>Watch screencast</li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      //çarpı işaereti
+
+      let tasksLi = document.getElementsByTagName("li");
+
+      for (let i = 0; i < tasksLi.length; i++) {
+        let span = document.createElement("span");
+        let carpi = document.createTextNode("\u00D7");
+        span.appendChild(carpi);
+        tasksLi[i].classList.add("kapat");
+        tasksLi[i].appendChild(span);
+      }
+      // çarpıya tıklayınca silme
+      let span = document.getElementsByTagName("span");
+      console.log(span);
+      for (let i = 0; i < span.length; i++) {
+        span[i].onclick = function () {
+          span[i].parentElement.style.display = "none";
+        };
+      }
+
+      //görev ekleme
+      let buton = document.querySelector("button");
+      buton.addEventListener("click", function (ekleme) {
+        let Ultask = document.querySelector("ul");
+        let inputVal = document.getElementById("input").value;
+        var t = document.createTextNode(inputVal);
+        let newLi = document.createElement("li");
+
+        if (inputVal == "") {
+          alert("Lütfen görev giriniz");
+        } else {
+          newLi.appendChild(t);
+          Ultask.appendChild(newLi);
+          console.log(Ultask);
+        }
+        document.getElementById("input").value = "";
+        let tasksLi = document.getElementsByTagName("li");
+
+        for (let i = 0; i < tasksLi.length; i++) {
+          let span = document.createElement("span");
+          let carpi = document.createTextNode("\u00D7");
+          span.appendChild(carpi);
+          tasksLi[i].classList.add("kapat");
+          tasksLi[i].appendChild(span);
+        }
+
+        //çarpıya tıklayınca silme
+        let span = document.getElementsByTagName("span");
+        console.log(span);
+        for (let i = 0; i < span.length; i++) {
+          span[i].onclick = function () {
+            span[i].parentElement.style.display = "none";
+          };
+        }
+      });
+
+      //   GÖREV TAMAMLANDI
+
+      for (let i = 0; i < tasksLi.length; i++) {
+        tasksLi[i].onclick = function () {
+          tasksLi[i].classList.toggle("checked");
+        };
+      }
+
+      
+      
+    </script>
+  </body>
+</html>

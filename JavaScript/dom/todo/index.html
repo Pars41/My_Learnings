@@ -58,13 +58,13 @@ ul li.checked {
 /* Add a "checked" mark when clicked on */
 ul li.checked::before {
   content: '';
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
   position: absolute;
   border-color: #fff;
   border-style: solid;
-  border-width: 0 2px 2px 0;
   top: 10px;
   left: 16px;
-  transform: rotate(45deg);
   height: 15px;
   width: 7px;
 }
@@ -150,7 +150,7 @@ input {
 
 <div id="myDIV" class="header">
   <h2 style="margin:5px">YAPILACAKLAR LİSTESİ</h2>
-  <input type="text" id="myInput" placeholder="Görevler">
+  <input type="text"  id="myInput" placeholder="Görevler">
   <span onclick="newElement()" class="addBtn">Ekle</span>
 </div>
 
@@ -161,11 +161,13 @@ input {
   <li>Buy eggs</li>
   <li>Read a book</li>
   <li>Organize office</li>
+  
 </ul>
 
 <script>
 // Create a "close" button and append it to each list item
 var myNodelist = document.getElementsByTagName("LI");
+
 var i;
 for (i = 0; i < myNodelist.length; i++) {
   var span = document.createElement("SPAN");
@@ -177,10 +179,12 @@ for (i = 0; i < myNodelist.length; i++) {
 
 // Click on a close button to hide the current list item
 var close = document.getElementsByClassName("close");
+// console.log(close)
 var i;
 for (i = 0; i < close.length; i++) {
   close[i].onclick = function() {
     var div = this.parentElement;
+    console.log(this.parentElement)
     div.style.display = "none";
   }
 }
@@ -189,15 +193,16 @@ for (i = 0; i < close.length; i++) {
 var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
   if (ev.target.tagName === 'LI') {
+    console.log(ev.target.tagName)
     ev.target.classList.toggle('checked');
   }
-}, false);
+},false); ///????????
 
 // Create a new list item when clicking on the "Add" button
 function newElement() {
   var li = document.createElement("li");
   var inputValue = document.getElementById("myInput").value;
-  var t = document.createTextNode(inputValue);
+  var t = document.createTextNode(inputValue);  
   li.appendChild(t);
   if (inputValue === '') {
     alert("You must write something!");

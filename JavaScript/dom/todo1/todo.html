@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #F8B195;
+            display: flex;
+            justify-content: center;
+            
+        }
+        .main{
+            background-color: #355C7D;
+            margin-top: 5rem;
+            width: 70%;
+            height: 65vh;
+        }
+        .main li{
+            list-style-type: none;
+        }
+        header{
+            text-align: center;
+        }
+        h1{
+            font-size: 4rem;
+            padding: 1rem
+        }
+        input{
+            width: 50%;
+            padding: .8rem ;
+
+        }
+        #add-btn{
+            padding: .8rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <header>
+            <h1>To Do List</h1>
+            <input type="text" id="myInput">
+            <button id="add-btn">Add</button>
+        </header>
+        <div class="list-menu">
+            <ul id="ul">
+                <li>Pre-Class</li>
+                <li>Post-Class</li>
+                <li>In-CLass</li>
+                <li>Sleep</li>
+                <li>Walk</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
