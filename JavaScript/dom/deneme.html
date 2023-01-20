@@ -1,38 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+    <style>
+      li {
+        list-style-type: none;
+      }
+    </style>
+  </head>
+  <body>
     <header id="header">
-        <h1 style="text-align: center">DOM SELECTORS</h1> 
-      </header>
-      <main>
-        <section class="add-item">
-          <h2>ADD NEW ITEM</h2>
-          <input id="input" type="text" value="GO" />
-          <input id="btn" type="button" value="ADD" />
-        </section>
-        <section class="item-list">
-          <h2>ITEM LIST</h2>          
-          <ul>
-            <li class="list">HTML</li>
-            <li class="list">CSS <span style="display: none"> Cascade Style Sheet</span></li>
-            <li class="list">Javascript</li>
-            <li class="list">React</li>
-            <li class="list">Django</li>
-          </ul>
-        </section>
-      </main>
-      <script>
-        const a = document.querySelector(".list")
-        // console.log()   
-        a.nextElementSibling.style.border = ".2rem solid red"
-        a.nextElementSibling.previousElementSibling.style.backgroundColor = "lightgrey"
+      <h1 style="text-align: center">DOM SELECTORS</h1>
+    </header>
+    <main>
+      <section class="add-item">
+        <h2>ADD NEW ITEM</h2>
+        <input id="input" type="text" value="GO" />
+        <input id="btn" type="button" value="ADD" />
+      </section>
+      <section class="item-list">
+        <h2>ITEM LIST</h2>
+        <ul>
+          <li class="list">HTML</li>
+          <li class="list">
+            CSS <span style="display: none"> Cascade Style Sheet</span>
+          </li>
+          <li class="list">Javascript</li>
+          <li class="list">React</li>
+          <li class="list">Django</li>
+        </ul>
+      </section>
+    </main>
+    <script>
+      const a = document.querySelector(".list");
+      // console.log()
+      a.nextElementSibling.style.border = ".2rem solid red";
+      a.nextElementSibling.previousElementSibling.style.backgroundColor =
+        "lightgrey";
+      a.parentNode.style.border = ".3rem dashed lightblue";
+      const newLi = document.createElement("li");
+      newLi.className = "last";
+      newLi.setAttribute("id", "yusuf");
+      newLi.innerText = "Aydos";
+      const add = document.getElementById("btn");
+      a.parentNode.appendChild(newLi);
 
-      </script>
-</body>
+      add.addEventListener("click", function () {
+        let val = add.previousElementSibling.value;
+        const Li = document.createElement("li");
+        Li.innerText= val;
+        a.parentNode.appendChild(Li);
+
+        console.log(val);
+      });
+
+      // console.log(newLi)
+    </script>
+  </body>
 </html>
