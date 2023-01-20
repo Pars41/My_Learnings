@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="checkout.css" />
     <title>Document</title>
     <style>
       * {
@@ -17,20 +16,25 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 0.7rem;
+        gap: 0.1rem;
+        /* background-color: rgb(32, 178, 171); */
+        background-image: url("./img/cat-sunset-city-scenery-anime-art-4k-wallpaper-uhdpaper.com-86@0@i.jpg");
+        background-position: center;
       }
       header {
+        margin-top: 1rem;
         font-size: 1.8rem;
         font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
       }
       main {
-        background-color: rgba(240, 212, 171, 0.247);
+        background-color: rgba(240, 212, 171, 0.879);
         padding: 2rem;
         /* margin: 1rem 5rem; */
         border-radius: 1rem;
+        box-shadow: -3px 5px 20px black;
       }
       img {
-        width: 10rem;
+        width: 8rem;
         margin-right: 1.5rem;
         border-radius: 1rem;
       }
@@ -102,7 +106,7 @@
     <main>
       <section class="first_section">
         <div class="img img1">
-          <img src="../TW-09/image/photo1.png" alt="" />
+          <img src="./img/photo1.png" alt="" />
         </div>
 
         <div class="inform bag">
@@ -118,13 +122,14 @@
           </div>
           <button class="remove">Remove</button>
           <p class="ayt">
-            Product Total: <span id="bag-total" class="product-total bag-total">$25.98</span>
+            Product Total:
+            <span id="bag-total" class="product-total bag-total">$25.98</span>
           </p>
         </div>
       </section>
 
       <section class="second_section">
-        <div class="img img2"><img src="/TW-09/image/photo2.png" alt="" /></div>
+        <div class="img img2"><img src="./img/photo2.png" alt="" /></div>
         <div class="inform shoes">
           <h3>Levi Shoes</h3>
           <p>
@@ -144,7 +149,7 @@
         </div>
       </section>
       <section class="third_section">
-        <div class="img img3"><img src="/TW-09/image/photo3.jpg" alt="" /></div>
+        <div class="img img3"><img src="./img/photo3.jpg" alt="" /></div>
         <div class="inform clock">
           <h3>Antique Clock</h3>
           <p>
@@ -158,7 +163,7 @@
             <br />
           </div>
           <button class="remove">Remove</button>
-          <p >
+          <p>
             Product Total: <span class="product-total clock-total">$74.99</span>
           </p>
         </div>
@@ -172,34 +177,45 @@
     </main>
 
     <script>
-      let negative = document.querySelector(".buton .negative");
+      let negative = document.querySelectorAll(".buton .negative");
       // console.log(negative);
-      let positive = document.querySelector(".plus");
+      let positive = document.querySelectorAll(".plus");
       // console.log(positive);
-      let input = document.querySelector("input");
+      let input = document.querySelectorAll("input");
       let bagTotal = document.getElementsByClassName("ayt");
-      
 
-
-      negative.addEventListener("click", function () {
-        if (input.value >= 1) {
-          input.value--;
-          document.getElementById("bag-total").innerHTML = `${(25.98*Number(input.value)).toFixed(2)}`;
-          let subtotal = document.getElementById("subtotal")
-          subtotal.innerText = `${(Number(((25.98*Number(input.value)).toFixed(2))) + Number(120.98)).toFixed(2)}`
-
-
-        }
-      });
-      positive.addEventListener("click", function () {
-        input.value++;
-        document.getElementById("bag-total").innerHTML = `${(25.98*Number(input.value)).toFixed(2)}`;
-        let subtotal = document.getElementById("subtotal")
-        subtotal.innerText = `${(Number(((25.98*Number(input.value)).toFixed(2))) + Number(120.98)).toFixed(2)}`
-
-      });
-      let subtotal = document.getElementById("subtotal")
-      subtotal.innerText = `${(Number(((25.98*Number(input.value)).toFixed(2))) + Number(120.98)).toFixed(2)}`
+      for (let i = 0; i < negative.length; i++) {
+        negative[i].addEventListener("click", function () {
+          if (input[i].value >= 1) {
+            input[i].value--;
+            document.getElementById("bag-total").innerHTML = `${(
+              25.98 * Number(input[i].value)
+            ).toFixed(2)}`;
+            let subtotal = document.getElementById("subtotal");
+            subtotal.innerText = `${(
+              Number((25.98 * Number(input[i].value)).toFixed(2)) +
+              Number(120.98)
+            ).toFixed(2)}`;
+          }
+        });
+      }
+      for (let i = 0; i < positive.length; i++) {
+        positive[i].addEventListener("click", function () {
+          input[i].value++;
+          console.log("çalışıyor")
+          document.getElementById("bag-total").innerHTML = `${(
+            25.98 * Number(input[i].value)
+          ).toFixed(2)}`;
+          let subtotal = document.getElementById("subtotal");
+          subtotal.innerText = `${(
+            Number((25.98 * Number(input[i].value)).toFixed(2)) + Number(120.98)
+          ).toFixed(2)}`;
+        });
+      }
+      let subtotal = document.getElementById("subtotal");
+      subtotal.innerText = `${(
+        Number((25.98 * Number(input.value)).toFixed(2)) + Number(120.98)
+      ).toFixed(2)}`;
     </script>
   </body>
 </html>
