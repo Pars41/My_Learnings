@@ -18,13 +18,17 @@ body {
   margin: 0rem 5rem;
   position: relative;
 }
+.bigger{
+  transform: scale(3) translateY(-40px);
+
+}
 header {
   display: flex;
   justify-content: space-between;
   margin-top: 1rem;
 }
 .groups{
-  position: absolute;
+  /* position: absolute; */
   width: 47rem;
   height: 7.7rem;
   background-color:#232a39 ;
@@ -134,13 +138,24 @@ header {
   margin: 0;
   position: relative;
 }
+.silik{
+  opacity: 0.3;
+  border: 3px solid red;
+
+}
+#alkali{
+  cursor: pointer;
+  z-index: 3;
+}
 .table div:hover {
   outline: 1px solid #ffcd037e;
   /* transform: scale(2.5) translate(0,-20px); */
   z-index: 2;
-  animation: fliker 3s ease-out infinite;
+  cursor: pointer;
+  /* animation: fliker 3s ease-out infinite;
   animation-iteration-count: 1;
-  animation-delay: 0.1s;
+  animation-delay: 0.1s; */
+  /* transform: scale(3) translateY(-40px); */
 }
 .first {
   grid-column: 1 / span 17;
