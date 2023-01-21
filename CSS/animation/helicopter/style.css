@@ -1,0 +1,235 @@
+.fullBody
+{
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	background-color: #dddddd;
+	background-color: #26bb08;
+    transform: rotateY(180deg);
+}
+
+.body-container
+{
+	width: 800px;
+	height: 600px;
+	background: #ffffff;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+
+}
+/* .helicopter{
+    border: 3px solid red;
+    height: 5rem;
+} */
+
+.helicopter--body
+{
+	width: 200px;
+	height: 120px;
+	background: #444;
+	border-radius: 20px;
+	position: absolute;
+	left: -200px;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+.helicopter--top
+{
+	background: #666;
+	height: 30px;
+    width: 15px;
+    position: absolute;
+    top: -30px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.helicopter--tail
+{
+	background: #444;
+    width: 200px;
+    height: 35px;
+    position: absolute;
+    left: 95%;
+    margin: auto;
+    bottom: 0;
+    top: 0;
+}
+
+.body__strip
+{
+	height: 10px;
+    width: 390px;
+    background: yellow;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 2;
+}
+
+.helicopter--tail::before
+{
+	content: "";
+    height: 90%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: inherit;
+    backface-visibility: visible;
+    transform: skewY(8deg);
+    top: -12px;
+}
+
+.helicopter--tail::after
+{
+	content: "";
+    height: 90%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background: inherit;
+    backface-visibility: visible;
+    transform: skewY(-8deg);
+    bottom: -12px;
+}
+
+.top-blade
+{
+    background: black;
+    width: 400px;
+    height: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.tail-container
+{
+	background: #999999;
+    height: 70px;
+    width: 30px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.front-foot
+{
+	height: 20px;
+	width: 15px;
+	background: #999999;
+	position: absolute;
+	top: 100%;
+	left: 30%;
+}
+
+.rear-foot
+{
+	height: 20px;
+	width: 15px;
+	background: #999999;
+	position: absolute;
+	top: 100%;
+	right: 20%;
+}
+
+.top-blade__spinning
+{
+	animation: topbladespinning .05s infinite linear alternate;
+}
+
+.foot
+{
+	height: 10px;
+    width: 240px;
+    background: #999999;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translate(-48%, 0);
+}
+
+.tail-bearing
+{
+	background: black;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 2;
+}
+
+.tail-blade
+{
+	background: black;
+    height: 100px;
+    width: 10px;
+    position: absolute;
+    z-index: 2;
+    top: -20%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.mirror
+{
+	background: rgba(46, 203, 239, 0.468);
+    height: 60px;
+    width: 93px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 30px;
+}
+
+.tail-blade__spinning
+{
+	animation: tailbladespinning .09s linear infinite;
+}
+
+@keyframes tailbladespinning
+{
+	0%
+	{
+		transform: rotate(0deg);
+	}
+	50%
+	{
+		transform: rotate(180deg);
+	}
+	100%{
+		transform: rotate(360deg)
+	}
+}
+
+@keyframes topbladespinning
+{
+	from {
+		width: 400px;
+        background-color: #999999;
+	}
+
+	to {
+
+		width: 20px;
+        background-color: #cc1111;
+
+	}
+}
