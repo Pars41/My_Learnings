@@ -17,8 +17,8 @@
         justify-content: center;
         align-items: center;
         gap: 0.1rem;
-        /* background-color: rgb(32, 178, 171); */
-        background-image: url("./img/cat-sunset-city-scenery-anime-art-4k-wallpaper-uhdpaper.com-86@0@i.jpg");
+        background-color: rgb(32, 178, 171);
+        /* background-image: url("./img/cat-sunset-city-scenery-anime-art-4k-wallpaper-uhdpaper.com-86@0@i.jpg"); */
         background-position: center;
       }
       header {
@@ -112,8 +112,8 @@
         <div class="inform bag">
           <h3>Vintage Backbag</h3>
           <p>
-            $25.98 <span> <del>$34.99</del></span>
-          </p>
+            25.98 </p><span> <del>$34.99</del></span>
+          
           <div class="buton">
             <button class="plus-neg negative">-</button
             ><input type="text" value="1" /><button class="plus-neg plus">
@@ -133,8 +133,8 @@
         <div class="inform shoes">
           <h3>Levi Shoes</h3>
           <p>
-            $45.99<span> <del>$54.99</del></span>
-          </p>
+            45.99</p><span> <del>$54.99</del></span>
+          
           <div class="buton">
             <button class="plus-neg negative">-</button>
             <input type="text" value="1" /><button class="plus-neg plus">
@@ -153,8 +153,8 @@
         <div class="inform clock">
           <h3>Antique Clock</h3>
           <p>
-            $74.99 <span> <del>$94.99</del></span>
-          </p>
+            74.99 </p><span> <del>$94.99</del></span>
+          
           <div class="buton">
             <button class="plus-neg negative">-</button
             ><input type="text" value="1" /><button class="plus-neg plus">
@@ -182,40 +182,61 @@
       let positive = document.querySelectorAll(".plus");
       // console.log(positive);
       let input = document.querySelectorAll("input");
-      let bagTotal = document.getElementsByClassName("ayt");
+      let producTotal = document.querySelectorAll(".product-total");
+      
+      // let subtotal = document.getElementById("subtotal");
+      // subtotal.innerText = ""
+
+      // let subtotal = document.getElementById("subtotal");
+      // subtotal.innerText = `${(
+      //   Number((25.98 * Number(input.value)).toFixed(2)) + Number(120.98)
+      // ).toFixed(2)}`;
+
 
       for (let i = 0; i < negative.length; i++) {
         negative[i].addEventListener("click", function () {
           if (input[i].value >= 1) {
             input[i].value--;
-            document.getElementById("bag-total").innerHTML = `${(
-              25.98 * Number(input[i].value)
-            ).toFixed(2)}`;
+            // producTotal[i].innerHTML = `${(
+            //   25.98 * Number(input[i].value)
+            // ).toFixed(2)}`;
+            producTotal[i].innerHTML = `${Number(input[i].value * input[i].parentElement.previousElementSibling.previousElementSibling.innerText).toFixed(2)} `
+
+            // let subtotal = document.getElementById("subtotal");
+            // subtotal.innerText = `${(
+            //   Number((25.98 * Number(input[i].value)).toFixed(2)) +
+            //   Number(120.98)
+            // ).toFixed(2)}`;
             let subtotal = document.getElementById("subtotal");
-            subtotal.innerText = `${(
-              Number((25.98 * Number(input[i].value)).toFixed(2)) +
-              Number(120.98)
-            ).toFixed(2)}`;
+            subtotal.innerText = 
+
           }
         });
       }
-      for (let i = 0; i < positive.length; i++) {
-        positive[i].addEventListener("click", function () {
-          input[i].value++;
-          console.log("çalışıyor")
-          document.getElementById("bag-total").innerHTML = `${(
-            25.98 * Number(input[i].value)
-          ).toFixed(2)}`;
-          let subtotal = document.getElementById("subtotal");
-          subtotal.innerText = `${(
-            Number((25.98 * Number(input[i].value)).toFixed(2)) + Number(120.98)
-          ).toFixed(2)}`;
-        });
-      }
-      let subtotal = document.getElementById("subtotal");
-      subtotal.innerText = `${(
-        Number((25.98 * Number(input.value)).toFixed(2)) + Number(120.98)
-      ).toFixed(2)}`;
+
+      positive.forEach((post)=>{
+        post.addEventListener("click",function(e){
+          // e.target.previousSibling.value++
+          post.previousSibling.value++
+          post.parentElement.nextElementSibling.nextElementSibling.children[0].innerText = `${Number(post.previousSibling.value * post.parentElement.previousElementSibling.previousElementSibling.innerText).toFixed(2)} `
+
+
+        })
+      })
+      // for (let i = 0; i < positive.length; i++) {
+      //   positive[i].addEventListener("click", function () {
+      //     input[i].value++;
+      //     console.log("çalışıyor")
+      //     producTotal[i].innerHTML = `${(
+      //       25.98 * Number(input[i].value)
+      //     ).toFixed(2)}`;
+      //     let subtotal = document.getElementById("subtotal");
+      //     subtotal.innerText = `${(
+      //       Number((25.98 * Number(input[i].value)).toFixed(2)) + Number(120.98)
+      //     ).toFixed(2)}`;
+      //   });
+      // }
+      
     </script>
   </body>
 </html>

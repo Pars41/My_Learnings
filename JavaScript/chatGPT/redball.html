@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="game-canvas" width="700" height="500"></canvas>
+
+<script>
+    // Get the canvas element
+    var canvas = document.getElementById("game-canvas");
+    var context = canvas.getContext("2d");
+    
+    // Load the helicopter image
+    var helicopterImage = new Image();
+    helicopterImage.src = "helicopter.png";
+    
+    // Set the initial position of the helicopter
+    var helicopterX = 50;
+    var helicopterY = 250;
+    
+    // Set the helicopter's speed
+    var helicopterSpeed = 5;
+    
+    // Set the game loop to run
+    setInterval(function() {
+        // Clear the canvas
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        
+        // Move the helicopter
+        helicopterX += helicopterSpeed;
+        
+        // Check for collision with the right edge of the screen
+        if (helicopterX + helicopterImage.width > canvas.width) {
+            helicopterSpeed = -helicopterSpeed;
+        }
+        if (helicopterX < 0) {
+            helicopterSpeed = -helicopterSpeed;
+        }
+        
+        // Draw the helicopter
+        context.drawImage(helicopterImage, helicopterX, helicopterY);
+    }, 10);
+</script>
+
+</body>
+</html>
