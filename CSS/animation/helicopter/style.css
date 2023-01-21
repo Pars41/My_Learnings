@@ -38,6 +38,7 @@
 	top: 0;
 	bottom: 0;
 	margin: auto;
+    box-shadow: 1rem 12rem 8rem 3rem black;
 }
 
 .helicopter--top
@@ -161,6 +162,10 @@
     bottom: -30px;
     left: 50%;
     transform: translate(-48%, 0);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom: 3px solid #6211cc;
+    border-left: 3px solid #6211cc;
 }
 
 .tail-bearing
@@ -197,6 +202,8 @@
     width: 93px;
     border-top-left-radius: 20px;
     border-bottom-right-radius: 30px;
+    border-left:2px solid rgba(0, 0, 0, 0.461) ;
+    border-top:2px solid rgba(0, 0, 0, 0.377) ;
 }
 
 .tail-blade__spinning
@@ -223,13 +230,13 @@
 {
 	from {
 		width: 400px;
-        background-color: #999999;
+        background-color: #eb2020;
 	}
 
 	to {
 
 		width: 20px;
-        background-color: #cc1111;
+        background-color: #6211cc;
 
 	}
 }
