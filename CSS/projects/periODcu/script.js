@@ -10,8 +10,9 @@ alkali.addEventListener("click",function(){
 })
 let div = document.querySelectorAll("div")
 
-div.forEach((e)=>{
-    e.addEventListener("click",function(e){
-        e.target.classList.add("bigger")
+div.forEach((a)=>{
+    a.addEventListener("click",function(a){
+        a.target.classList.add("bigger")
+        console.log(a.target)
     })
 })
