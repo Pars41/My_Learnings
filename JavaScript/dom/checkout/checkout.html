@@ -97,9 +97,66 @@
         text-align: center;
         font-weight: 900;
       }
-      .sad{
-        background-color: brown;
-        border: 3px solid red;
+      .sad {
+        border: 3px solid rgba(255, 0, 0, 0.05);
+        position: relative;
+      }
+      .sad::before {
+        content: " ";
+        position: absolute;
+        bottom: -2.5rem;
+        left: -2.5rem;
+        width: 12rem;
+        height: 12rem;
+        background-image: url(./img/png-clipart-crying-emoji-smiley-sadness-emoticon-cute-sad-smiley-face-orange.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 1rem;
+      }
+
+      .shakes {
+        /* Start the shake animation and make the animation last for 0.5 seconds */
+        animation: shake 0.5s;
+
+        /* When the animation is finished, start again */
+        animation-iteration-count: linear;
+      }
+
+      @keyframes shake {
+        0% {
+          transform: translate(1px, 1px) rotate(0deg);
+        }
+        10% {
+          transform: translate(-1px, -2px) rotate(-1deg);
+        }
+        20% {
+          transform: translate(-3px, 0px) rotate(1deg);
+        }
+        30% {
+          transform: translate(3px, 2px) rotate(0deg);
+        }
+        40% {
+          transform: translate(1px, -1px) rotate(1deg);
+        }
+        50% {
+          transform: translate(-1px, 2px) rotate(-1deg);
+        }
+        60% {
+          transform: translate(-3px, 1px) rotate(0deg);
+        }
+        70% {
+          transform: translate(3px, 1px) rotate(-1deg);
+        }
+        80% {
+          transform: translate(-1px, -1px) rotate(1deg);
+        }
+        90% {
+          transform: translate(1px, 2px) rotate(0deg);
+        }
+        100% {
+          transform: translate(1px, -2px) rotate(-1deg);
+        }
       }
     </style>
   </head>
@@ -108,7 +165,7 @@
       <header><h1>Checkout</h1></header>
     </section>
     <main>
-      <section class="first_section">
+      <section class="first_section section">
         <div class="img img1">
           <img src="./img/photo1.png" alt="" />
         </div>
@@ -132,7 +189,7 @@
         </div>
       </section>
 
-      <section class="second_section">
+      <section class="second_section section">
         <div class="img img2"><img src="./img/photo2.png" alt="" /></div>
         <div class="inform shoes">
           <h3>Levi Shoes</h3>
@@ -152,7 +209,7 @@
           </p>
         </div>
       </section>
-      <section class="third_section">
+      <section class="third_section section">
         <div class="img img3"><img src="./img/photo3.jpg" alt="" /></div>
         <div class="inform clock">
           <h3>Antique Clock</h3>
@@ -189,8 +246,10 @@
       let tax = document.querySelector(".tax");
       let topTotal = document.querySelector(".topTotal");
       let ship = document.querySelector(".shipping");
-      let remove = document.querySelectorAll(".remove")
-      let footer = document.querySelector(".price")
+      let remove = document.querySelectorAll(".remove");
+      let footer = document.querySelector(".price");
+      let section = document.querySelectorAll(".section");
+      let main = document.querySelector("main")
 
       for (let i = 0; i < negative.length; i++) {
         negative[i].addEventListener("click", function () {
@@ -226,7 +285,6 @@
             }
             let sumTotal = sum + taxTotal + Number(ship.innerText);
 
-            
             sumTotal = sum + taxTotal + Number(ship.innerText);
 
             topTotal.innerText = sumTotal.toFixed(2);
@@ -259,15 +317,23 @@
           topTotal.innerText = sumTotal.toFixed(2);
         });
       });
-      remove.forEach((e)=>{
-        e.addEventListener("click",function(){
-          e.parentElement.parentElement.style.display = "none"
-          if(e[0].style.display == "none" && e[1].style.display == "none" && e[2].style.display == "none"){
-            footer.classList.add(".sad")
+      remove.forEach((e) => {
+        e.addEventListener("click", function () {
+          e.parentElement.parentElement.style.display = "none";
+          console.log(section[0]);
 
+          if (
+            section[0].style.display == "none" &&
+            section[1].style.display == "none" &&
+            section[2].style.display == "none"
+          ) {
+          footer.classList.add("shakes")
+
+            footer.classList.add("sad");
+            console.log(footer.classList);
           }
-        })
-      })
+        });
+      });
     </script>
   </body>
 </html>
