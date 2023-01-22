@@ -27,19 +27,21 @@
         font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
       }
       main {
-        background-color: rgba(240, 212, 171, 0.879);
+        background-color: rgb(241, 218, 185);
         padding: 2rem;
         /* margin: 1rem 5rem; */
         border-radius: 1rem;
         box-shadow: -3px 5px 20px black;
         margin-top: 1rem;
         z-index: 110;
-
       }
       img {
         width: 8rem;
         margin-right: 1.5rem;
         border-radius: 1rem;
+      }
+      img:hover {
+        box-shadow: 3px 3px 8px black;
       }
       section {
         display: flex;
@@ -64,7 +66,7 @@
         display: flex;
         border: 1.3px solid rgba(128, 128, 128, 0.685);
         border-radius: 0.5rem;
-        padding: .2rem;
+        padding: 0.2rem;
       }
       .buton :hover {
         cursor: pointer;
@@ -86,6 +88,7 @@
         color: white;
         border: none;
         border-radius: 0.3rem;
+        cursor: pointer;
       }
       footer span {
         float: right;
@@ -105,6 +108,8 @@
       .sad {
         border: 3px solid rgba(255, 0, 0, 0.05);
         position: relative;
+        animation: ucc 2s;
+        animation-iteration-count: linear;
       }
       .sad::before {
         content: " ";
@@ -118,20 +123,33 @@
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: 1rem;
-
+        animation: ucc 2s;
+        animation-iteration-count: linear;
       }
-      h3:hover{
-        animation: piuw 2s;
+      .remove {
+        position: relative;
+      }
+      .remove:hover::before {
+        content: "nothing cheaper";
+        position: absolute;
+        left: 11rem;
+        color: lightcoral;
+        font-weight: 900;
+        text-shadow: 2px 2px 8px rgb(0, 0, 0);
+      }
+      h4:hover {
+        animation: piuw 3s;
         animation-iteration-count: linear;
         color: tomato;
         text-shadow: 2px 2px 8px white;
-
       }
-      h1:hover{
+      h1:hover {
         color: white;
         text-shadow: 2px 2px 8px black;
       }
-
+      h1 {
+        margin-bottom: 2rem;
+      }
       .shakes {
         /* Start the shake animation and make the animation last for 0.5 seconds */
         animation: shake 0.5s;
@@ -139,20 +157,48 @@
         /* When the animation is finished, start again */
         animation-iteration-count: linear;
       }
+
+      .animate-charcter {
+        text-transform: uppercase;
+        background-image: linear-gradient(
+          -225deg,
+          #231557 0%,
+          #44107a 29%,
+          #ff1361 67%,
+          #fff800 100%
+        );
+        background-size: auto auto;
+        background-clip: border-box;
+        background-size: 200% auto;
+        color: #fff;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: textclip 2s linear infinite;
+        display: inline-block;
+        font-size: 190px;
+      }
+
+      @keyframes textclip {
+        to {
+          transform: translateY(500px);
+          background-position: 200% center;
+        }
+      }
+
       @keyframes piuw {
-        30%{
+        25% {
           transform: translate(-120px);
           opacity: 0.8;
         }
-        50%{
+        50% {
           opacity: 0.6;
-
         }
-        70%{
+        70% {
           opacity: 0.4;
-
         }
-        100%{
+        100% {
           transform: translate(1500px);
           opacity: 0;
         }
@@ -192,12 +238,19 @@
           transform: translate(1px, -2px) rotate(-1deg);
         }
       }
+      @keyframes ucc {
+        100% {
+          transform: rotate(359deg) scale(0.1);
+        }
+      }
     </style>
   </head>
   <body>
     <section>
-      <header><h1>Checkout Page</h1>
-      <h3>Free shipping over $500 in subtotal</h3></header>
+      <header>
+        <h1>Checkout Page</h1>
+        <h4>Free shipping over $200 in subtotal</h4>
+      </header>
     </section>
     <main>
       <section class="first_section section">
@@ -271,7 +324,7 @@
         <p>Total <span class="topTotal">188.41</span></p>
       </footer>
     </main>
-        
+
     <script>
       // variables
 
@@ -287,7 +340,7 @@
       let footer = document.querySelector(".price");
       let section = document.querySelectorAll(".section");
       let main = document.querySelector("main");
-      let header = document.querySelector("header")
+      let header = document.querySelector("header");
 
       // decrease button
 
@@ -324,13 +377,13 @@
             }
             let sumTotal =
               Number(subtotal.innerHTML) + taxTotal + Number(ship.innerHTML);
-            if (subtotal.innerText < 500 && subtotal.innerText > 0) {
+            if (subtotal.innerText < 200 && subtotal.innerText > 0) {
               ship.innerText = 15;
             }
 
             sumTotal =
               Number(subtotal.innerHTML) + taxTotal + Number(ship.innerHTML);
-            if (subtotal.innerText >= 500) {
+            if (subtotal.innerText >= 200) {
               ship.innerHTML = "<del>$15</del>";
               ship.classList.add("shakes");
               sumTotal = Number(subtotal.innerHTML) + taxTotal;
@@ -365,12 +418,12 @@
           let sumTotal =
             Number(subtotal.innerHTML) + taxTotal + Number(ship.innerHTML);
 
-          if (subtotal.innerText >= 500) {
+          if (subtotal.innerText >= 200) {
             ship.innerHTML = "<del>$15</del>";
             ship.classList.add("shakes");
 
             sumTotal = Number(subtotal.innerHTML) + taxTotal;
-          } else if (subtotal.innerText < 500) {
+          } else if (subtotal.innerText < 200) {
             ship.classList.remove("shakes");
           }
           // sumTotal = Number(subtotal.innerHTML) + taxTotal + Number(ship.innerHTML);
@@ -391,9 +444,13 @@
             section[1].style.display == "none" &&
             section[2].style.display == "none"
           ) {
-            footer.classList.add("sad", "shakes");
-            console.log(footer.classList);
-            header.style.display = "none"
+            // footer.classList.add("sad", "shakes");
+            // console.log(footer.classList);
+            // header.style.display = "none"
+            footer.style.display = "none";
+            main.style.display = "none";
+            document.querySelector("h4").style.display = "none";
+            document.querySelector("h1").classList.add("animate-charcter")
           }
         });
       });
