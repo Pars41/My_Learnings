@@ -97,6 +97,10 @@
         text-align: center;
         font-weight: 900;
       }
+      .sad{
+        background-color: brown;
+        border: 3px solid red;
+      }
     </style>
   </head>
   <body>
@@ -185,6 +189,8 @@
       let tax = document.querySelector(".tax");
       let topTotal = document.querySelector(".topTotal");
       let ship = document.querySelector(".shipping");
+      let remove = document.querySelectorAll(".remove")
+      let footer = document.querySelector(".price")
 
       for (let i = 0; i < negative.length; i++) {
         negative[i].addEventListener("click", function () {
@@ -206,11 +212,21 @@
             let taxTotal = subtotal.innerHTML * 0.18;
             tax.innerText = taxTotal.toFixed(2);
 
-            let sumTotal = sum + taxTotal + Number(ship.innerText);
-
+            if (
+              input[0].value == 0 &&
+              input[1].value == 0 &&
+              input[2].value == 0
+            ) {
+              ship.innerText = 0;
+            } else {
+              ship.innerText = 15;
+            }
             if (sumTotal < 500) {
               ship.innerText = 15;
             }
+            let sumTotal = sum + taxTotal + Number(ship.innerText);
+
+            
             sumTotal = sum + taxTotal + Number(ship.innerText);
 
             topTotal.innerText = sumTotal.toFixed(2);
@@ -234,16 +250,6 @@
           let taxTotal = subtotal.innerHTML * 0.18;
           tax.innerText = taxTotal.toFixed(2);
 
-          if (
-            input[0].value == 0 &&
-            input[1].value == 0 &&
-            input[2].value == 0
-          ) {
-            ship.innerText = 0;
-          } else {
-            ship.innerText = 15;
-          }
-
           let sumTotal = sum + taxTotal + Number(ship.innerText);
           if (sumTotal >= 500) {
             ship.innerText = 0;
@@ -253,6 +259,15 @@
           topTotal.innerText = sumTotal.toFixed(2);
         });
       });
+      remove.forEach((e)=>{
+        e.addEventListener("click",function(){
+          e.parentElement.parentElement.style.display = "none"
+          if(e[0].style.display == "none" && e[1].style.display == "none" && e[2].style.display == "none"){
+            footer.classList.add(".sad")
+
+          }
+        })
+      })
     </script>
   </body>
 </html>
