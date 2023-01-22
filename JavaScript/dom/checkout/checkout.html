@@ -13,10 +13,10 @@
       }
       body {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
-        gap: 0.1rem;
+        gap: 10rem;
         background-color: rgb(32, 178, 171);
         /* background-image: url("./img/cat-sunset-city-scenery-anime-art-4k-wallpaper-uhdpaper.com-86@0@i.jpg"); */
         background-position: center;
@@ -32,6 +32,9 @@
         /* margin: 1rem 5rem; */
         border-radius: 1rem;
         box-shadow: -3px 5px 20px black;
+        margin-top: 1rem;
+        z-index: 110;
+
       }
       img {
         width: 8rem;
@@ -60,7 +63,8 @@
       .buton {
         display: flex;
         border: 1.3px solid rgba(128, 128, 128, 0.685);
-        border-radius: 0.3rem;
+        border-radius: 0.5rem;
+        padding: .2rem;
       }
       .buton :hover {
         cursor: pointer;
@@ -73,6 +77,7 @@
         border: none;
         font-size: 1rem;
         font-weight: 600;
+        border-radius: 5px;
       }
       .remove {
         background-color: brown;
@@ -91,7 +96,7 @@
         margin-top: 0.5rem;
       }
       input {
-        width: 3rem;
+        width: 1rem;
         background-color: rgba(240, 212, 171, 0.096);
         border: none;
         text-align: center;
@@ -113,6 +118,18 @@
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: 1rem;
+
+      }
+      h3:hover{
+        animation: piuw 2s;
+        animation-iteration-count: linear;
+        color: tomato;
+        text-shadow: 2px 2px 8px white;
+
+      }
+      h1:hover{
+        color: white;
+        text-shadow: 2px 2px 8px black;
       }
 
       .shakes {
@@ -122,7 +139,24 @@
         /* When the animation is finished, start again */
         animation-iteration-count: linear;
       }
+      @keyframes piuw {
+        30%{
+          transform: translate(-120px);
+          opacity: 0.8;
+        }
+        50%{
+          opacity: 0.6;
 
+        }
+        70%{
+          opacity: 0.4;
+
+        }
+        100%{
+          transform: translate(1500px);
+          opacity: 0;
+        }
+      }
       @keyframes shake {
         0% {
           transform: translate(1px, 1px) rotate(0deg);
@@ -162,7 +196,8 @@
   </head>
   <body>
     <section>
-      <header><h1>Checkout</h1></header>
+      <header><h1>Checkout Page</h1>
+      <h3>Free shipping over $500 in subtotal</h3></header>
     </section>
     <main>
       <section class="first_section section">
@@ -230,14 +265,16 @@
         </div>
       </section>
       <footer class="price">
-        <p>Subtotal <span id="subtotal" class="subtotal2"> $146.96</span></p>
+        <p>Subtotal <span id="subtotal" class="subtotal2"> 146.96</span></p>
         <p>Tax(%18) <span class="tax">26.45</span></p>
         <p>Shipping <span class="shipping">15.00</span></p>
         <p>Total <span class="topTotal">188.41</span></p>
       </footer>
     </main>
-
+        
     <script>
+      // variables
+
       let negative = document.querySelectorAll(".buton .negative");
       let positive = document.querySelectorAll(".plus");
       let input = document.querySelectorAll("input");
@@ -249,7 +286,10 @@
       let remove = document.querySelectorAll(".remove");
       let footer = document.querySelector(".price");
       let section = document.querySelectorAll(".section");
-      let main = document.querySelector("main")
+      let main = document.querySelector("main");
+      let header = document.querySelector("header")
+
+      // decrease button
 
       for (let i = 0; i < negative.length; i++) {
         negative[i].addEventListener("click", function () {
@@ -266,6 +306,7 @@
               Number(producTotal[0].innerText) +
               Number(producTotal[1].innerText) +
               Number(producTotal[2].innerText);
+
             subtotal.innerText = sum.toFixed(2);
 
             let taxTotal = subtotal.innerHTML * 0.18;
@@ -277,23 +318,36 @@
               input[2].value == 0
             ) {
               ship.innerText = 0;
+              topTotal.innerText = 0;
             } else {
               ship.innerText = 15;
             }
-            if (sumTotal < 500) {
+            let sumTotal =
+              Number(subtotal.innerHTML) + taxTotal + Number(ship.innerHTML);
+            if (subtotal.innerText < 500 && subtotal.innerText > 0) {
               ship.innerText = 15;
             }
-            let sumTotal = sum + taxTotal + Number(ship.innerText);
 
-            sumTotal = sum + taxTotal + Number(ship.innerText);
+            sumTotal =
+              Number(subtotal.innerHTML) + taxTotal + Number(ship.innerHTML);
+            if (subtotal.innerText >= 500) {
+              ship.innerHTML = "<del>$15</del>";
+              ship.classList.add("shakes");
+              sumTotal = Number(subtotal.innerHTML) + taxTotal;
+            } else if (subtotal.innerText < 500) {
+              ship.classList.remove("shakes");
+            }
 
             topTotal.innerText = sumTotal.toFixed(2);
           }
         });
       }
 
+      //increase button
+
       positive.forEach((post) => {
         post.addEventListener("click", function (e) {
+          ship.innerText = 15;
           post.previousSibling.value++;
           post.parentElement.nextElementSibling.nextElementSibling.children[0].innerText = `${Number(
             post.previousSibling.value *
@@ -308,15 +362,25 @@
           let taxTotal = subtotal.innerHTML * 0.18;
           tax.innerText = taxTotal.toFixed(2);
 
-          let sumTotal = sum + taxTotal + Number(ship.innerText);
-          if (sumTotal >= 500) {
-            ship.innerText = 0;
+          let sumTotal =
+            Number(subtotal.innerHTML) + taxTotal + Number(ship.innerHTML);
+
+          if (subtotal.innerText >= 500) {
+            ship.innerHTML = "<del>$15</del>";
+            ship.classList.add("shakes");
+
+            sumTotal = Number(subtotal.innerHTML) + taxTotal;
+          } else if (subtotal.innerText < 500) {
+            ship.classList.remove("shakes");
           }
-          sumTotal = sum + taxTotal + Number(ship.innerText);
+          // sumTotal = Number(subtotal.innerHTML) + taxTotal + Number(ship.innerHTML);
 
           topTotal.innerText = sumTotal.toFixed(2);
         });
       });
+
+      // remove section
+
       remove.forEach((e) => {
         e.addEventListener("click", function () {
           e.parentElement.parentElement.style.display = "none";
@@ -327,10 +391,9 @@
             section[1].style.display == "none" &&
             section[2].style.display == "none"
           ) {
-          footer.classList.add("shakes")
-
-            footer.classList.add("sad");
+            footer.classList.add("sad", "shakes");
             console.log(footer.classList);
+            header.style.display = "none"
           }
         });
       });
