@@ -111,9 +111,9 @@
 
         <div class="inform bag">
           <h3>Vintage Backbag</h3>
-          <p>
-            25.98 </p><span> <del>$34.99</del></span>
-          
+          <p>25.98</p>
+          <span> <del>$34.99</del></span>
+
           <div class="buton">
             <button class="plus-neg negative">-</button
             ><input type="text" value="1" /><button class="plus-neg plus">
@@ -123,7 +123,7 @@
           <button class="remove">Remove</button>
           <p class="ayt">
             Product Total:
-            <span id="bag-total" class="product-total bag-total">$25.98</span>
+            <span id="bag-total" class="product-total bag-total">25.98</span>
           </p>
         </div>
       </section>
@@ -132,9 +132,9 @@
         <div class="img img2"><img src="./img/photo2.png" alt="" /></div>
         <div class="inform shoes">
           <h3>Levi Shoes</h3>
-          <p>
-            45.99</p><span> <del>$54.99</del></span>
-          
+          <p>45.99</p>
+          <span> <del>$54.99</del></span>
+
           <div class="buton">
             <button class="plus-neg negative">-</button>
             <input type="text" value="1" /><button class="plus-neg plus">
@@ -144,7 +144,7 @@
           </div>
           <button class="remove">Remove</button>
           <p>
-            Product Total: <span class="product-total shoes-total">$45.99</span>
+            Product Total: <span class="product-total shoes-total">45.99</span>
           </p>
         </div>
       </section>
@@ -152,9 +152,9 @@
         <div class="img img3"><img src="./img/photo3.jpg" alt="" /></div>
         <div class="inform clock">
           <h3>Antique Clock</h3>
-          <p>
-            74.99 </p><span> <del>$94.99</del></span>
-          
+          <p>74.99</p>
+          <span> <del>$94.99</del></span>
+
           <div class="buton">
             <button class="plus-neg negative">-</button
             ><input type="text" value="1" /><button class="plus-neg plus">
@@ -164,79 +164,95 @@
           </div>
           <button class="remove">Remove</button>
           <p>
-            Product Total: <span class="product-total clock-total">$74.99</span>
+            Product Total: <span class="product-total clock-total">74.99</span>
           </p>
         </div>
       </section>
       <footer class="price">
         <p>Subtotal <span id="subtotal" class="subtotal2"> $146.96</span></p>
-        <p>Tax(%18) <span class="tax">$26.45</span></p>
-        <p>Shipping <span>$15.00</span></p>
-        <p>Total <span class="">$188.41</span></p>
+        <p>Tax(%18) <span class="tax">26.45</span></p>
+        <p>Shipping <span class="shipping">15.00</span></p>
+        <p>Total <span class="topTotal">188.41</span></p>
       </footer>
     </main>
 
     <script>
       let negative = document.querySelectorAll(".buton .negative");
-      // console.log(negative);
       let positive = document.querySelectorAll(".plus");
-      // console.log(positive);
       let input = document.querySelectorAll("input");
       let producTotal = document.querySelectorAll(".product-total");
-      
-      // let subtotal = document.getElementById("subtotal");
-      // subtotal.innerText = ""
-
-      // let subtotal = document.getElementById("subtotal");
-      // subtotal.innerText = `${(
-      //   Number((25.98 * Number(input.value)).toFixed(2)) + Number(120.98)
-      // ).toFixed(2)}`;
-
+      let subtotal = document.getElementById("subtotal");
+      let tax = document.querySelector(".tax");
+      let topTotal = document.querySelector(".topTotal");
+      let ship = document.querySelector(".shipping");
 
       for (let i = 0; i < negative.length; i++) {
         negative[i].addEventListener("click", function () {
           if (input[i].value >= 1) {
             input[i].value--;
-            // producTotal[i].innerHTML = `${(
-            //   25.98 * Number(input[i].value)
-            // ).toFixed(2)}`;
-            producTotal[i].innerHTML = `${Number(input[i].value * input[i].parentElement.previousElementSibling.previousElementSibling.innerText).toFixed(2)} `
 
-            // let subtotal = document.getElementById("subtotal");
-            // subtotal.innerText = `${(
-            //   Number((25.98 * Number(input[i].value)).toFixed(2)) +
-            //   Number(120.98)
-            // ).toFixed(2)}`;
-            let subtotal = document.getElementById("subtotal");
-            subtotal.innerText = 
+            producTotal[i].innerHTML = `${Number(
+              input[i].value *
+                input[i].parentElement.previousElementSibling
+                  .previousElementSibling.innerText
+            ).toFixed(2)} `;
 
+            let sum =
+              Number(producTotal[0].innerText) +
+              Number(producTotal[1].innerText) +
+              Number(producTotal[2].innerText);
+            subtotal.innerText = sum.toFixed(2);
+
+            let taxTotal = subtotal.innerHTML * 0.18;
+            tax.innerText = taxTotal.toFixed(2);
+
+            let sumTotal = sum + taxTotal + Number(ship.innerText);
+
+            if (sumTotal < 500) {
+              ship.innerText = 15;
+            }
+            sumTotal = sum + taxTotal + Number(ship.innerText);
+
+            topTotal.innerText = sumTotal.toFixed(2);
           }
         });
       }
 
-      positive.forEach((post)=>{
-        post.addEventListener("click",function(e){
-          // e.target.previousSibling.value++
-          post.previousSibling.value++
-          post.parentElement.nextElementSibling.nextElementSibling.children[0].innerText = `${Number(post.previousSibling.value * post.parentElement.previousElementSibling.previousElementSibling.innerText).toFixed(2)} `
+      positive.forEach((post) => {
+        post.addEventListener("click", function (e) {
+          post.previousSibling.value++;
+          post.parentElement.nextElementSibling.nextElementSibling.children[0].innerText = `${Number(
+            post.previousSibling.value *
+              post.parentElement.previousElementSibling.previousElementSibling
+                .innerText
+          ).toFixed(2)} `;
+          let sum =
+            Number(producTotal[0].innerText) +
+            Number(producTotal[1].innerText) +
+            Number(producTotal[2].innerText);
+          subtotal.innerText = sum.toFixed(2);
+          let taxTotal = subtotal.innerHTML * 0.18;
+          tax.innerText = taxTotal.toFixed(2);
 
+          if (
+            input[0].value == 0 &&
+            input[1].value == 0 &&
+            input[2].value == 0
+          ) {
+            ship.innerText = 0;
+          } else {
+            ship.innerText = 15;
+          }
 
-        })
-      })
-      // for (let i = 0; i < positive.length; i++) {
-      //   positive[i].addEventListener("click", function () {
-      //     input[i].value++;
-      //     console.log("çalışıyor")
-      //     producTotal[i].innerHTML = `${(
-      //       25.98 * Number(input[i].value)
-      //     ).toFixed(2)}`;
-      //     let subtotal = document.getElementById("subtotal");
-      //     subtotal.innerText = `${(
-      //       Number((25.98 * Number(input[i].value)).toFixed(2)) + Number(120.98)
-      //     ).toFixed(2)}`;
-      //   });
-      // }
-      
+          let sumTotal = sum + taxTotal + Number(ship.innerText);
+          if (sumTotal >= 500) {
+            ship.innerText = 0;
+          }
+          sumTotal = sum + taxTotal + Number(ship.innerText);
+
+          topTotal.innerText = sumTotal.toFixed(2);
+        });
+      });
     </script>
   </body>
 </html>
