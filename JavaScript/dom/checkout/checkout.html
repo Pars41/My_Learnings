@@ -137,6 +137,10 @@
         font-weight: 900;
         text-shadow: 2px 2px 8px rgb(0, 0, 0);
       }
+      h4{
+        
+        text-shadow: 2px 2px 8px rgb(241, 218, 185);
+      }
       h4:hover {
         animation: piuw 3s;
         animation-iteration-count: linear;
@@ -144,11 +148,13 @@
         text-shadow: 2px 2px 8px white;
       }
       h1:hover {
-        color: white;
+        color: rgb(241, 218, 185);
         text-shadow: 2px 2px 8px black;
       }
       h1 {
         margin-bottom: 2rem;
+        text-shadow: 2px 2px 8px rgb(241, 218, 185);
+
       }
       .shakes {
         /* Start the shake animation and make the animation last for 0.5 seconds */
@@ -318,10 +324,10 @@
         </div>
       </section>
       <footer class="price">
-        <p>Subtotal <span id="subtotal" class="subtotal2"> 146.96</span></p>
-        <p>Tax(%18) <span class="tax">26.45</span></p>
-        <p>Shipping <span class="shipping">15.00</span></p>
-        <p>Total <span class="topTotal">188.41</span></p>
+        <p>Subtotal <span>$</span> <span id="subtotal" class="subtotal2"> 146.96</span></p>
+        <p>Tax(%18) <span>$</span><span class="tax">26.45</span></p>
+        <p>Shipping <span>$</span><span class="shipping">15.00</span></p>
+        <p>Total <span>$</span><span class="topTotal">188.41</span></p>
       </footer>
     </main>
 
@@ -419,7 +425,7 @@
             Number(subtotal.innerHTML) + taxTotal + Number(ship.innerHTML);
 
           if (subtotal.innerText >= 200) {
-            ship.innerHTML = "<del>$15</del>";
+            ship.innerHTML = "<del>15</del>";
             ship.classList.add("shakes");
 
             sumTotal = Number(subtotal.innerHTML) + taxTotal;
