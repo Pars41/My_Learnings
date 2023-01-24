@@ -16,7 +16,7 @@ body {
 }
 .table-container {
   margin: 0rem 5rem;
-  position: relative;
+  /* position: relative; */
 }
 .bigger{
   transform: scale(3) translateY(-40px);
@@ -123,6 +123,7 @@ header {
   grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
   /* font-size: 0.6rem; */
   font-size: 1.7rem;
+  
 }
 .table div {
   background-color: #232a39;
@@ -136,7 +137,18 @@ header {
   justify-content: center;
   align-items: center;
   margin: 0;
-  position: relative;
+  /* position: relative; */
+}
+.table div:hover::after{
+  content: "dfg";
+  height: 90vh;
+  width: 40%;
+  float: left;
+  color: white;
+  background-color: yellow;
+  position: absolute;
+  left: 2rem;
+  top: 1.5rem;
 }
 .silik{
   opacity: 0.3;
