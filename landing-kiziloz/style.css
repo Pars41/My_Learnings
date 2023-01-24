@@ -1,0 +1,59 @@
+:root{
+    --red:#cbdc35;
+}
+/* navbar */
+*{
+    box-sizing: border-box;
+}
+.navbar{
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--red);
+}
+.nav-link{
+    transition: color 1s;
+}
+
+
+
+.nav-link:hover{
+    color: var(--red)
+}
+.carousel-item{
+    max-height: 88.1vh;
+}
+
+.navbar-nav li:first-child{
+    animation-delay: 1s;
+}
+.navbar-nav li:nth-child(2){
+    animation-delay: .75s;
+}
+.navbar-nav li:nth-child(3){
+    animation-delay: .5s;
+}
+.navbar-nav li:last-child{
+    animation-delay: .25s;
+}
+
+.carousel-caption h5 {
+    color: rgb(187, 26, 93);
+    font-size: 2.4rem;
+    text-shadow: 3px 3px 5px black;
+}
+.carousel-caption p {
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-shadow: 3px 3px 5px black;
+}
+.carousel-caption{
+    bottom: 3rem;
+    
+}
+.yuks{
+    height: 100vh;
+    width: 100% !important;
+}
+/* carousel */
+
