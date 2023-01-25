@@ -51,7 +51,10 @@ setTimeout(()=>{
 
 //* Asenkron (setInterval, clearInterval)
 //*----------------------------------------------------
-
-setInterval(()=>{
-    // console.log("popppy")
-},1000)
+let counter = 0;
+let sec1 = setInterval(()=>{
+    console.log(++counter)
+    if(counter>10){
+        clearInterval(sec1)
+    }
+},3000)
