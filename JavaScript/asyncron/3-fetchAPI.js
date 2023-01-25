@@ -12,4 +12,18 @@
 
 console.log("*** FETCH *** API ***");
 
-fetch("https://api.github.com/users").then((res)=> res.json()).then((data)=>console.log(data)).catch((err)=>console.log(err))
+fetch("https://api.github.com/users").then((res)=> res.json()).then((data)=>showGitHubUsers(data)).catch((err)=>console.log(err))
+
+const showGitHubUsers = (users) => {
+    console.log(users)
+    const userArticle = document.querySelector(".users")
+    console.log(userArticle)
+    users.forEach((user)=>{
+        userArticle.innerHTML += 
+        
+        `
+        <h2 class="display-1 mb-1 ">${user.login}</h2>
+        <img class="w-25 mb-5" src=${user.avatar_url} alt="" />`
+        
+    })
+}
