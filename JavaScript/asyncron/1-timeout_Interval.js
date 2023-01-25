@@ -19,17 +19,20 @@
 //* Senkron
 //* ------------------------------------------------
 
-const wait = (waitingTime)=>{
-    const starTime = new Date().getTime()
-    while(new Date().getTime() < starTime +waitingTime){
-        ;
-    }
-}
-console.log("async")
-// alert("hi")
-wait(2000)
-console.log("hello spartsns")
-// confirm("yes or no")
+const wait = (waitingTime) => {
+  const starTime = new Date().getTime();
+  while (new Date().getTime() < starTime + waitingTime) {}
+};
+console.log("async");
+// alert("hi")  //blocking code
+
+
+wait(5000); //blocking code
+
+
+console.log("hello spartsns");
+
+// confirm("yes or no") //blocking code
 
 //* Asenkron (setTimeout)
 //*----------------------------------------------------
