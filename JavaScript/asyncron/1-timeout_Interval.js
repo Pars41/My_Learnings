@@ -29,6 +29,7 @@ console.log("async");
 console.time("myTimer")
 
 wait(3000); //blocking code
+wait(200); //blocking code
 
 console.timeEnd("myTimer")  //debug amaçlı kullanılabilir
 
@@ -38,6 +39,19 @@ console.log("hello spartsns");
 
 //* Asenkron (setTimeout)
 //*----------------------------------------------------
+console.log("timeout started")
+setTimeout(()=>{
+    console.log("2 sec")
+},2000)
+console.log("timeout finished")
+setTimeout(()=>{
+    console.log("1 sec")
+},1000)
+
 
 //* Asenkron (setInterval, clearInterval)
 //*----------------------------------------------------
+
+setInterval(()=>{
+    // console.log("popppy")
+},1000)
