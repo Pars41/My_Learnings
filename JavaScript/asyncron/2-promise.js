@@ -32,8 +32,8 @@
 
 
 console.log("promise")
-myPromise =new Promise((resolve,reject)=>{
-    const success = Math.floor(Math.random()*4)
+const myPromise = new Promise((resolve,reject)=>{
+    const success = Math.floor(Math.random()*4)  // 0,1,2,3
     const data = {a:2,b:3}
     if(success){
         console.log("Data fetched")
@@ -43,3 +43,6 @@ myPromise =new Promise((resolve,reject)=>{
         reject(new Error("somting went wrong"))
     }
 })
+myPromise.then((res)=>{
+    console.log(res)
+}).catch((err)=>console.log(err))
