@@ -53,8 +53,9 @@ setTimeout(()=>{
 //*----------------------------------------------------
 let counter = 0;
 let sec1 = setInterval(()=>{
-    console.log(++counter)
+    console.log(counter++)
     if(counter>10){
         clearInterval(sec1)
+        console.log("timer stopped")
     }
-},3000)
+},1000)
