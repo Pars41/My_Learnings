@@ -18,10 +18,18 @@
 
 //* Senkron
 //* ------------------------------------------------
+
+const wait = (waitingTime)=>{
+    const starTime = new Date().getTime()
+    while(new Date().getTime() < starTime +waitingTime){
+        ;
+    }
+}
 console.log("async")
-alert("hi")
+// alert("hi")
+wait(2000)
 console.log("hello spartsns")
-confirm("yes or no")
+// confirm("yes or no")
 
 //* Asenkron (setTimeout)
 //*----------------------------------------------------
