@@ -26,9 +26,11 @@ const wait = (waitingTime) => {
 console.log("async");
 // alert("hi")  //blocking code
 
+console.time("myTimer")
 
-wait(5000); //blocking code
+wait(3000); //blocking code
 
+console.timeEnd("myTimer")  //debug amaçlı kullanılabilir
 
 console.log("hello spartsns");
 
