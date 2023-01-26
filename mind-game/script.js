@@ -25,6 +25,8 @@ function matchCards(img1, img2) {
     matched++;
     if (matched == 8) {
       setTimeout(() => {
+  prog.classList.remove("progress");
+
         document.querySelector(".wrapper").classList.add("rotate", "zoom");
         return shuffleCard();
       }, 1000);
@@ -39,11 +41,14 @@ function matchCards(img1, img2) {
   }
   document.querySelector(".wrapper").classList.remove("light");
   setTimeout(() => {
+    document.querySelector(".wrapper").classList.add("wraperro");
+
     cardOne.classList.add("shake");
     cardTwo.classList.add("shake");
   }, 400);
 
   setTimeout(() => {
+    document.querySelector(".wrapper").classList.remove("wraperro")
     cardOne.classList.remove("shake", "flip");
     cardTwo.classList.remove("shake", "flip");
     cardOne = cardTwo = "";
@@ -69,12 +74,13 @@ function progress() {
   prog.classList.add("progress");
   setTimeout(() => {
   prog.classList.remove("progress");
-
+    shuffleCard();
+    
     document.querySelector(".wrapper").classList.add("rotate", "zoom");
     setTimeout(()=>{
     location.reload()
 
-    },4100)
+    },4000)
     
 }, 50000);
 

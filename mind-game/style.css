@@ -1,12 +1,12 @@
 /* Import Google Font - Poppins */
 /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap'); */
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-body{
+body {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,33 +14,41 @@ body{
   background-color: bisque;
   background-size: cover;
 }
-.wrapper{
+.wrapper {
   padding: 25px;
   border-radius: 2rem;
   background: #fa9b0c;
-  box-shadow: 0px -25px 20px -5px #1396FE,
-              25px 0px 20px -5px #1396FE,
-              0px 25px 20px -5px #1396FE,
-             -25px 0px 20px -5px #1396FE;
-             
+  box-shadow: 0px -15px 20px -5px #1396fe, 15px 0px 20px -5px #1396fe,
+    0px 15px 20px -5px #1396fe, -15px 0px 20px -5px #1396fe;
+
+  margin-top: 1rem;
+}
+.wraperro {
+  
+  box-shadow: 0px -15px 20px -5px #fe046e, 15px 0px 20px -5px #fe046e,
+    0px 15px 20px -5px #fe046e, -15px 0px 20px -5px #fe046e;
+    
+
   
 }
-.light{
-  animation: puff 2s linear  forwards;
+.light {
+  animation: puff 2s linear forwards;
 }
-.cards, .card, .view{
+.cards,
+.card,
+.view {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.cards{
+.cards {
   height: 35rem;
   width: 35rem;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.cards .card{
+.cards .card {
   cursor: pointer;
   list-style: none;
   user-select: none;
@@ -50,47 +58,42 @@ body{
   height: calc(100% / 4 - 10px);
   width: calc(100% / 4 - 10px);
 }
-.card.shake{
-  animation: shake 0.35s ease-in-out;
+.card.shake {
+  animation: shake 0.25s ease-in-out;
 }
 @keyframes shake {
-  0%, 100%{
+  0%,
+  100% {
     transform: translateX(0);
   }
-  20%{
-    transform: translateX(-13px);
+  20% {
+    transform: translateX(-10px) scale(.9);
   }
-  40%{
-    transform: translateX(13px);
+  40% {
+    transform: translateX(0px)  scale(1.1);
   }
-  60%{
-    transform: translateX(-8px);
+  60% {
+    transform: translateX(10px) scale(.9);
   }
-  80%{
-    transform: translateX(8px);
+  80% {
+    transform: translateX(0px) scale(1.1);
   }
 }
 @keyframes puff {
-  0%{
-    box-shadow: 0px -25px 20px -5px #1396FE,
-              25px 0px 20px -5px #1396FE,
-              0px 25px 20px -5px #1396FE,
-             -25px 0px 20px -5px #1396FE;
+  0% {
+    box-shadow: 0px -25px 20px -5px #1396fe, 25px 0px 20px -5px #1396fe,
+      0px 25px 20px -5px #1396fe, -25px 0px 20px -5px #1396fe;
   }
-  50%{
-    box-shadow: 0px -25px 20px -5px #1ffe13,
-              25px 0px 20px -5px #1ffe13,
-              0px 25px 20px -5px #1ffe13,
-             -25px 0px 20px -5px #1ffe13;
+  50% {
+    box-shadow: 0px -25px 20px -5px #1ffe13, 25px 0px 20px -5px #1ffe13,
+      0px 25px 20px -5px #1ffe13, -25px 0px 20px -5px #1ffe13;
   }
-  100%{
-    box-shadow: 0px -25px 20px -5px #1396FE,
-              25px 0px 20px -5px #1396FE,
-              0px 25px 20px -5px #1396FE,
-             -25px 0px 20px -5px #1396FE;
+  100% {
+    box-shadow: 0px -25px 20px -5px #1396fe, 25px 0px 20px -5px #1396fe,
+      0px 25px 20px -5px #1396fe, -25px 0px 20px -5px #1396fe;
   }
 }
-.card .view{
+.card .view {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -98,261 +101,219 @@ body{
   background: #fa9b0c;
   pointer-events: none;
   backface-visibility: hidden;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.25s linear;
 }
-.rotate{
+.rotate {
   transform: rotate(359.99deg);
   transition: all 1s;
 }
-.card .front-view img{
+.card .front-view img {
   width: 100%;
 }
-.card .back-view img{
+.card .back-view img {
   width: 100%;
   height: 100%;
 }
-.card .back-view{
+.card .back-view {
   transform: rotateY(-180deg);
 }
-.card.flip .back-view{
+.card.flip .back-view {
   transform: rotateY(0);
 }
-.card.flip .front-view{
+.card.flip .front-view {
   transform: rotateY(180deg);
 }
-.view img{
+.view img {
   border-radius: 1rem;
-  box-shadow: 0px -25px 20px -30px #FE046E,
-25px 0px 20px -30px #FE046E,
-0px 25px 20px -30px #FE046E,
--25px 0px 20px -30px #FE046E;
+  box-shadow: 0px -25px 20px -30px #fe046e, 25px 0px 20px -30px #fe046e,
+    0px 25px 20px -30px #fe046e, -25px 0px 20px -30px #fe046e;
 }
-.zoom{
-  animation: zoom 4s linear  forwards;
-
+.zoom {
+  animation: zoom 4s linear forwards;
 }
 @keyframes zoom {
-  0%{
-    box-shadow: 0px -25px 20px -5px #1ffe13,
-              25px 0px 20px -5px #1ffe13,
-              0px 25px 20px -5px #1ffe13,
-             -25px 0px 20px -5px #1ffe13;
+  0% {
+    box-shadow: 0px -25px 20px -5px #1ffe13, 25px 0px 20px -5px #1ffe13,
+      0px 25px 20px -5px #1ffe13, -25px 0px 20px -5px #1ffe13;
   }
-  20%{
-    box-shadow: 0px -25px 70px -5px #FE046E,
-              25px 0px 70px -5px #FE046E,
-              0px 25px 70px -5px #FE046E,
-             -25px 0px 70px -5px #FE046E;
+  20% {
+    box-shadow: 0px -25px 70px -5px #fe046e, 25px 0px 70px -5px #fe046e,
+      0px 25px 70px -5px #fe046e, -25px 0px 70px -5px #fe046e;
   }
-  40%{
-    box-shadow: 0px -25px 20px -5px #1396FE,
-              25px 0px 20px -5px #1396FE,
-              0px 25px 20px -5px #1396FE,
-             -25px 0px 20px -5px #1396FE;
+  40% {
+    box-shadow: 0px -25px 20px -5px #1396fe, 25px 0px 20px -5px #1396fe,
+      0px 25px 20px -5px #1396fe, -25px 0px 20px -5px #1396fe;
   }
-  60%{
-    box-shadow: 0px -25px 70px -5px #1ffe13,
-              25px 0px 70px -5px #1ffe13,
-              0px 25px 70px -5px #1ffe13,
-             -25px 0px 70px -5px #1ffe13;
+  60% {
+    box-shadow: 0px -25px 70px -5px #1ffe13, 25px 0px 70px -5px #1ffe13,
+      0px 25px 70px -5px #1ffe13, -25px 0px 70px -5px #1ffe13;
   }
-  80%{
-    box-shadow: 0px -25px 20px -5px #1396FE,
-              25px 0px 20px -5px #1396FE,
-              0px 25px 20px -5px #1396FE,
-             -25px 0px 20px -5px #1396FE;
+  80% {
+    box-shadow: 0px -25px 20px -5px #1396fe, 25px 0px 20px -5px #1396fe,
+      0px 25px 20px -5px #1396fe, -25px 0px 20px -5px #1396fe;
   }
-  90%{
-    box-shadow: 0px -25px 70px -5px #FE046E,
-              25px 0px 70px -5px #FE046E,
-              0px 25px 70px -5px #FE046E,
-             -25px 0px 70px -5px #FE046E;
+  90% {
+    box-shadow: 0px -25px 70px -5px #fe046e, 25px 0px 70px -5px #fe046e,
+      0px 25px 70px -5px #fe046e, -25px 0px 70px -5px #fe046e;
   }
-  100%{
-    box-shadow: 0px -25px 20px -5px #1396FE,
-              25px 0px 20px -5px #1396FE,
-              0px 25px 20px -5px #1396FE,
-             -25px 0px 20px -5px #1396FE;
+  100% {
+    box-shadow: 0px -25px 20px -5px #1396fe, 25px 0px 20px -5px #1396fe,
+      0px 25px 20px -5px #1396fe, -25px 0px 20px -5px #1396fe;
   }
 }
-
-
-@media screen and (max-width: 700px) {
-  .cards{
-    height: 350px;
-    width: 350px;
-  }
-  .card .front-view img{
-    width: 17px;
-  }
-  .card .back-view img{
-    max-width: 40px;
-  }
-}
-
-@media screen and (max-width: 530px) {
-  .cards{
-    height: 300px;
-    width: 300px;
-  }
-  .card .front-view img{
-    width: 15px;
-  }
-  .card .back-view img{
-    max-width: 35px;
-  }
-}
-
-
 
 
 
 @keyframes loader {
+  0% {
+    width: 0;
+    background: #1ffe13;
+  }
+  5% {
+    width: 5%;
+    background: #1ffe13;
+  }
+  10% {
+    width: 10%;
+    background: #1ffe13;
+  }
+  15% {
+    width: 15%;
+    background: #1ffe13;
+  }
 
-	0% {
-		width: 0;
+  20% {
+    width: 20%;
     background: #1ffe13;
-	}
-	5% {
-		width: 5%;
-    background: #1ffe13;
-	}
-	10% {
-		width: 10%;
-    background: #1ffe13;
-	}
-	15% {
-		width: 15%;
-    background: #1ffe13;
+  }
 
+  25% {
+    width: 25%;
+    background: #1ffe13;
+  }
+  30% {
+    width: 30%;
+    background: #1ffe13;
+  }
+  35% {
+    width: 35%;
+    background: #1396fe;
+  }
+  40% {
+    width: 40%;
+    background: #1396fe;
+  }
+
+  45% {
+    width: 45%;
+    background: #1396fe;
+  }
+
+  50% {
+    width: 50%;
+    background: #1396fe;
+  }
+  55% {
+    width: 55%;
+    background: #1396fe;
+  }
+  60% {
+    width: 60%;
+    background: #1396fe;
+  }
+
+  65% {
+    width: 65%;
+    background: #1396fe;
+  }
+
+  70% {
+    width: 70%;
+    background: #fe046e;
     
-	}
+  }
 
-	20% {
-		width: 20%;
-    background: #1ffe13;
-	}
+  75% {
+    width: 75%;
+    background: #fe046e;
+  }
+  80% {
+    width: 80%;
+    background: #fe046e;
+  }
+  85% {
+    width: 85%;
+    background: #fe046e;
+  }
+  90% {
+    width: 90%;
+    background: #fe046e;
+  }
 
-	25% {
-		width: 25%;
-    background: #1ffe13;
+  95% {
+    width: 95%;
+    background: #fe046e;
+  }
 
-	}
-	30% {
-		width: 30%;
-    background: #1ffe13;
-
-	}
-	35% {
-		width: 35%;
-    background: #1396FE;
-	}
-	40% {
-		width: 40%;
-    background: #1396FE;
-
-	}
-
-	45% {
-		width: 45%;
-    background: #1396FE;
-
-	}
-
-	50% {
-		width: 50%;
-    background: #1396FE;
-	}
-	55% {
-		width: 55%;
-    background: #1396FE;
-
-	}
-	60% {
-		width: 60%;
-    background: #1396FE;
-
-	}
-
-	65% {
-		width: 65%;
-    background: #1396FE;
-	}
-
-	70% {
-		width: 70%;
-    background: #FE046E;
-
-	}
-
-	75% {
-		width: 75%;
-    background: #FE046E;
-
-    
-	}
-	80% {
-		width: 80%;
-    background: #FE046E;
-    
-	}
-	85% {
-		width: 85%;
-    background: #FE046E;
-
-    
-	}
-	90% {
-		width: 90%;
-    background: #FE046E;
-
-    
-	}
-
-	95% {
-		width: 95%;
-    background: #FE046E;
-	}
-
-	100% {
-		width: 100%;
-    background: #FE046E;
-
-	}
-
+  100% {
+    width: 100%;
+    background: #fe046e;
+  }
 }
 
-
 .progress-bar {
-	border-radius: 60px;
-	overflow: hidden;
+  border-radius: 60px;
+  overflow: hidden;
   width: 100%;
-
-	
-
+  margin-top: 0.8rem;
 }
 .progress-bar span {
   display: block;
 }
 
 .bar {
-  background: rgba(0,0,0,0.075);
+  background: rgba(0, 0, 0, 0.075);
 }
 
 .progress {
-  animation: loader 50s linear infinite;  
-  background: #1396FE;
+  animation: loader 50s linear infinite;
+  background: #1396fe;
   color: #fff;
   padding: 10px;
   width: 0;
 }
-
 
 .progress-bar {
   left: 50%;
   max-width: 50%;
   position: absolute;
   top: 1rem;
-  transform: translate3d(-50%,-50%,0);
+  transform: translate3d(-50%, -50%, 0);
+}
+
+@media screen and (max-width: 700px) {
+  .cards {
+    height: 350px;
+    width: 350px;
+  }
+  .card .front-view img {
+    width: 100%;
+  }
+  .card .back-view img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .cards {
+    height: 300px;
+    width: 300px;
+  }
+  .card .front-view img {
+    width: 100%;
+  }
+  .card .back-view img {
+    width: 100%;
+  }
 }
