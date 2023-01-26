@@ -8,6 +8,11 @@ let prog = document.querySelector(".bar span")
 
 function progress(){
    prog.classList.add("progress")
+   setTimeout(()=>{
+    shuffleCard()
+    document.querySelector(".wrapper").classList.add("rotate","zoom")
+
+   },50000)
 }
 
 
