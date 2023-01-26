@@ -212,7 +212,7 @@ body{
 
 	0% {
 		width: 0;
-    background: #1396FE;
+    background: #1ffe13;
 	}
 	5% {
 		width: 5%;
@@ -220,11 +220,11 @@ body{
 	}
 	10% {
 		width: 10%;
-    background: #FE046E;
+    background: #1ffe13;
 	}
 	15% {
 		width: 15%;
-    background: #1396FE;
+    background: #1ffe13;
 
     
 	}
@@ -236,21 +236,21 @@ body{
 
 	25% {
 		width: 25%;
-    background: #FE046E;
+    background: #1ffe13;
 
 	}
 	30% {
 		width: 30%;
-    background: #1396FE;
+    background: #1ffe13;
 
 	}
 	35% {
 		width: 35%;
-    background: #1ffe13;
+    background: #1396FE;
 	}
 	40% {
 		width: 40%;
-    background: #FE046E;
+    background: #1396FE;
 
 	}
 
@@ -262,11 +262,11 @@ body{
 
 	50% {
 		width: 50%;
-    background: #1ffe13;
+    background: #1396FE;
 	}
 	55% {
 		width: 55%;
-    background: #FE046E;
+    background: #1396FE;
 
 	}
 	60% {
@@ -277,7 +277,7 @@ body{
 
 	65% {
 		width: 65%;
-    background: #1ffe13;
+    background: #1396FE;
 	}
 
 	70% {
@@ -288,13 +288,13 @@ body{
 
 	75% {
 		width: 75%;
-    background: #1396FE;
+    background: #FE046E;
 
     
 	}
 	80% {
 		width: 80%;
-    background: #1ffe13;
+    background: #FE046E;
     
 	}
 	85% {
@@ -305,14 +305,14 @@ body{
 	}
 	90% {
 		width: 90%;
-    background: #1396FE;
+    background: #FE046E;
 
     
 	}
 
 	95% {
 		width: 95%;
-    background: #1ffe13;
+    background: #FE046E;
 	}
 
 	100% {
