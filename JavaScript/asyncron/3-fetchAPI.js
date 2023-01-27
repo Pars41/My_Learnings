@@ -10,20 +10,45 @@
 //? fetch() fonksiyonu veri getirmek istediginiz kaynagin yolunu gosteren zorunlu
 //? bir parametre almaktadir ve bu istegin cevabini gosteren bir Promise dondurmektedir.
 
-console.log("*** FETCH *** API ***");
+// console.log("*** FETCH *** API ***");
 
-fetch("https://api.github.com/users")
-  .then((res) => res.json())
-  .then((data) => showGitHubUsers(data))
-  .catch((err) => console.log(err));
+// fetch("https://api.github.com/users")
+//   .then((res) => res.json())
+//   .then((data) => showGitHubUsers(data))
+//   .catch((err) => console.log(err));
 
-const showGitHubUsers = (users) => {
-  console.log(users);
-  const userArticle = document.querySelector(".users");
-  users.forEach((user) => {
-    userArticle.innerHTML += `
-        <h2 class="display-1 mb-1 ">${user.login}</h2>
-        <img class="w-25 mb-5" src=${user.avatar_url} alt="" />`;
-  });
+// const showGitHubUsers = (users) => {
+//   console.log(users);
+//   const userArticle = document.querySelector(".users");
+//   users.forEach((user) => {
+//     userArticle.innerHTML += `
+//         <h2 class="display-1 mb-1 ">${user.login}</h2>
+//         <img class="w-25 mb-5" src=${user.avatar_url} alt="" />`;
+//   });
+// };
+// console.log("SON");
+
+// let x = 0;
+// async function test() {
+// x += await 2;
+// console.log(x);
+// }
+// test();
+// x += 1;
+// console.log(x);
+
+// console.log('I');
+// setTimeout(() => {
+// console.log('love');
+// }, 0);
+// console.log('Javascript!');
+
+var v = 1;
+var f1 = function () {
+console.log(v);
 };
-console.log("SON");
+var f2 = function () {
+var v = 2;
+f1();
+};
+f2();

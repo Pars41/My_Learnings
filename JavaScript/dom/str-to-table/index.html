@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../bootstrap/css/bootstrap.css" />
+    <title>String To Table</title>
+    <style>
+      tr:nth-child(odd) {
+        background-color: lightgrey;
+      }
+      tr:nth-child(odd) {
+        background-color: lightsalmon;
+      }
+      tr:first-child {
+        background-color: dimgray;
+        color: lightsalmon;
+      }
+    </style>
+  </head>
+  <body>
+    <table class="table">
+      <tr>
+        <th>St Nr</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Location</th>
+        <th>Path</th>
+      </tr>
+    </table>
+    <script>
+      let tablo = document.querySelector("table");
+      let input = [
+        "C1234 - John Doe, London, Full-Stack",
+        "C2345 - Jane Doe, London, Data-Science",
+        "C2346 - Mary Ann, Paris, AWS-Devops",
+        "C2347 - Adam Smith, Texas, AWS-Devops",
+        "C2444 - Michael Great, Arizona, Full-Stack",
+        "C2555 - William Cash, Manchester, Data-Science",
+        "C2455 - Patrick Jane, Madrid, Full-Stack",
+      ];
+      let cityPath = [];
+      input.map((e) => cityPath.push(e.split(",")));
+
+      let number = [];
+      cityPath.forEach((x) => number.push(x[0].split("-")));
+
+      let name = [];
+      number.forEach((z) => name.push(z[1].split(" ")));
+
+      cityPath.forEach((y) => y.shift());
+
+      number.forEach((i) => i.pop());
+
+      name.forEach((q) => q.shift());
+
+      let tBody = tablo.children[0];
+      function strToTable() {
+        input.forEach(() => tBody.appendChild(document.createElement("tr")));
+        let tr = document.querySelectorAll("tr");
+        for (let i = 1; i < input.length; i++) {
+          for (let r = 0; r < 5; r++) {
+            tr[i].appendChild(document.createElement("td"));
+          }
+        }
+
+        for (let i = 1; i < input.length; i++) {
+          for (let a = 0; a < 5; a++) {
+            tr[i].children[0].innerHTML = number[i];
+            tr[i].children[1].innerHTML = name[i][0];
+            tr[i].children[2].innerHTML = name[i][1];
+            tr[i].children[3].innerHTML = cityPath[i][0];
+            tr[i].children[4].innerHTML = cityPath[i][1];
+          }
+        }
+      }
+      strToTable();
+    </script>
+  </body>
+</html>
