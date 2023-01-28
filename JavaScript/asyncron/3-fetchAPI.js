@@ -10,45 +10,41 @@
 //? fetch() fonksiyonu veri getirmek istediginiz kaynagin yolunu gosteren zorunlu
 //? bir parametre almaktadir ve bu istegin cevabini gosteren bir Promise dondurmektedir.
 
-// console.log("*** FETCH *** API ***");
+console.log("FETCH")
 
-// fetch("https://api.github.com/users")
-//   .then((res) => res.json())
-//   .then((data) => showGitHubUsers(data))
-//   .catch((err) => console.log(err));
+fetch("https://api.github.com/users")
+  .then((res) => {
+    console.log(res)
 
-// const showGitHubUsers = (users) => {
-//   console.log(users);
-//   const userArticle = document.querySelector(".users");
-//   users.forEach((user) => {
-//     userArticle.innerHTML += `
-//         <h2 class="display-1 mb-1 ">${user.login}</h2>
-//         <img class="w-25 mb-5" src=${user.avatar_url} alt="" />`;
-//   });
-// };
-// console.log("SON");
+    //! Error Handling
+    // if (res.status>= 200 && res.status <=299)
+    if (!res.ok) {
+      throw new Error(`Something went wrong: ${res.status} `)
+    }
+    return res.json()
+  })
+  .then((data) => showGithubUsers(data))
+  .catch((hata) => {
+    console.log(hata)
+    const userArticle = document.querySelector(".users")
+    userArticle.innerHTML = `
+     <h2 class="text-warning display-6">${hata}</h2>
+    `
+  })
 
-// let x = 0;
-// async function test() {
-// x += await 2;
-// console.log(x);
-// }
-// test();
-// x += 1;
-// console.log(x);
+const showGithubUsers = (users) => {
+  console.log(users)
+  const userArticle = document.querySelector(".users")
 
-// console.log('I');
-// setTimeout(() => {
-// console.log('love');
-// }, 0);
-// console.log('Javascript!');
+  users.forEach((user) => {
+    //  console.log(user)
+    userArticle.innerHTML += `
+    <h2 class="h6 text-warning">${user.login}</h2>
+    <img class="w-25 mb-4" src=${user.avatar_url} alt="" />`
+  })
+}
 
-var v = 1;
-var f1 = function () {
-console.log(v);
-};
-var f2 = function () {
-var v = 2;
-f1();
-};
-f2();
+console.log("Bitti")
+
+
+//OPTIONAL CHAINING     ???????? search for it
