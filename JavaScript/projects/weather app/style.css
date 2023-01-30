@@ -1,0 +1,38 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+section{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 2rem;
+  gap: 2rem;
+  font-size: 2rem;
+}
+form #search{
+  width: 40%;
+  padding: .3rem;
+  border: none;
+  border-bottom: 1px solid black;
+}
+form .btn{
+  padding: .3rem;
+  border-radius: .6rem;
+  border: none;
+}
+form .btn:hover{
+  padding: .3rem;
+  border-radius: .6rem;
+  border: 1px solid teal;
+}
+div{
+  
+  background-color: aqua;
+}
+form{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
