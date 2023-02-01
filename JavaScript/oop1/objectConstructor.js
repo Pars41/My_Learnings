@@ -43,4 +43,11 @@ console.log(book3.getSummary(),book3);
 
 console.log(book1.__proto__);
 
+// book1.price = 236;  (sadece book1 e uygulanır)
+Book.prototype.price = 0;    //Tüm book objelerine uygulanır
+console.log(book1);
 
+book1.price = 130;
+book2.price = 185;
+
+console.log(book1,book2,book3);
