@@ -22,6 +22,8 @@ function Book(title, author, year){
 Book.prototype.getSummary = function (){
     return `${this.title} was written by ${this.author} in ${this.year}`
 }
+console.log(Book.prototype);
+
 
 // Book kalıbında yeni bir örnek (instance) oluşturduk****
 const book1 = new Book("Kasagi","Ömer Seyfettin",1920)
@@ -29,4 +31,8 @@ console.log(book1.getSummary());
 
 const book2 = new Book("Cin Ali","Ali Desidero",2002)
 console.log(book2.getSummary());
+
+const book3 = new Book("Yiğidi Gül Ağlatır","Yusuf Miroğlu",2003)
+console.log(book3.getSummary(),book3);
+console.log(book1.__proto__);
 
