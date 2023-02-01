@@ -55,14 +55,18 @@ console.log(book1,book2,book3);
 
 //INHERITANCE (Kalıtım - ES5)
 
+//sub-class
 function Magazine(title, author, year, month){
     //ınheritance----+++
     Book.call(this, title, author, year)
     this.month = month 
 }
 
-Magazine.prototype = Book.prototype 
+// Prototype lar miras almak için Object.create() metodu kullanılır
+Magazine.prototype = Object.create(Book.prototype)
 
 const mag1 = new Magazine("Noe", "Güdüllü Ömer", 2022, "Agu")
 console.log(mag1);
+
+//Prototype lar doğrudan miras olarak gelmez
 console.log(mag1.getSummary());

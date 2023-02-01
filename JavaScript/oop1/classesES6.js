@@ -11,3 +11,35 @@
 
 //? Bir parent class'in degisken ve fonksiyonelliği extends
 //? keyword'u ile child class'a gecmektedir.(INHERITANCE)
+
+console.log("*** ES-6 - Classes");
+
+class Book{
+    constructor(title, author, year){
+        this.title = title
+        this.author = author
+        this.year = year
+        //bu alana yazılan her metot her bir instance da yer alır ve doğru değil
+        
+
+    }
+    //bu kısımda yazılanlar ise prototype alanına gider
+    getSummary(){
+        return `${this.title} was written by ${this.author} in ${this.year}`
+    }
+    getTitle = function(){
+        return this.title
+    }
+    getAge(){
+        return `${new Date().getFullYear()-this.year}`
+    }
+}
+// Book kalıbında yeni bir örnek (instance) oluşturduk****
+const book1 = new Book("Kasagi","Ömer Seyfettin",1920)
+console.log(book1);
+console.log(book1.getSummary());
+
+const book2 = new Book("Cin Ali","Ali Desidero",2002)
+console.log(book2.getSummary());
+
+console.log(book2.getAge());
