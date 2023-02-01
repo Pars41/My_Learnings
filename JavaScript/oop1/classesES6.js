@@ -43,3 +43,16 @@ const book2 = new Book("Cin Ali","Ali Desidero",2002)
 console.log(book2.getSummary());
 
 console.log(book2.getAge());
+
+
+//Sub-class tanımlanması 
+ class Magazine extends Book {
+    constructor(title,author,yaer,month){
+        super(title,author,yaer)
+        this.month = month
+
+    }
+ }
+
+ const mag1 = new Magazine("Noe", "Güdüllü Ömer", 2022, "Agu")
+console.log(mag1.getAge(),"*",mag1.getSummary(),"*",mag1.getTitle());
