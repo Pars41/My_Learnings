@@ -19,6 +19,9 @@ function Book(title, author, year){
     // }
 
 }
+//* Ornegin Book nesnesinin tum instance'lari getSummary() fonksiyonunu miras alabilir.
+//* Ancak, getSummary() fonksiyonu bellekte sadece bir yer kaplamaktadir.
+
 Book.prototype.getSummary = function (){
     return `${this.title} was written by ${this.author} in ${this.year}`
 }
@@ -34,5 +37,10 @@ console.log(book2.getSummary());
 
 const book3 = new Book("Yiğidi Gül Ağlatır","Yusuf Miroğlu",2003)
 console.log(book3.getSummary(),book3);
+
+//* Bir nesnenin prototiplerine .prototype ile erisilebilir.
+//* Ancak bir instance'in prototiplerine .__proto__ ile erisilmektedir.
+
 console.log(book1.__proto__);
+
 
