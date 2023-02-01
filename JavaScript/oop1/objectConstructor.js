@@ -51,3 +51,18 @@ book1.price = 130;
 book2.price = 185;
 
 console.log(book1,book2,book3);
+
+
+//INHERITANCE (Kalıtım - ES5)
+
+function Magazine(title, author, year, month){
+    //ınheritance----+++
+    Book.call(this, title, author, year)
+    this.month = month 
+}
+
+Magazine.prototype = Book.prototype 
+
+const mag1 = new Magazine("Noe", "Güdüllü Ömer", 2022, "Agu")
+console.log(mag1);
+console.log(mag1.getSummary());
