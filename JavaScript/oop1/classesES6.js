@@ -54,5 +54,5 @@ console.log(book2.getAge());
     }
  }
 
- const mag1 = new Magazine("Noe", "Güdüllü Ömer", 2022, "Agu")
+ const mag1 = new Magazine("Hayvan Çiftliği", "George Orwell", 1945, "Agu")
 console.log(mag1.getAge(),"*",mag1.getSummary(),"*",mag1.getTitle());
