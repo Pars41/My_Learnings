@@ -44,6 +44,15 @@
 
             audio.play()
         })
+        let bool = true;
+
+        let mode = document.querySelector(".mode")
+        mode.addEventListener("click",()=>{
+
+        bool = !bool;
+        })
+        console.log(bool);
+
       function showTime() {
         let date = new Date();
         let h = date.getHours(); // 0 - 23
@@ -94,14 +103,14 @@
         let time = h + ":" ;
         let min = m
         let sec = s;
-        document.getElementById("MyClockDisplay").innerText = time;
-        document.getElementById("MyClockDisplay").textContent = time;
+        document.getElementById("MyClockDisplay").innerText = bool==true ? time: date.getHours() + ":"
+        document.getElementById("MyClockDisplay").textContent = bool==true ? time: date.getHours()  + ":"
         document.getElementById("min").innerText = min;
         document.getElementById("min").textContent = min;
         document.getElementById("sec").innerText = sec;
         document.getElementById("sec").textContent = sec;
-        document.getElementById("session").innerText = session;
-        document.getElementById("session").textContent = session;
+        document.getElementById("session").innerText = bool==true ? session: "24H";
+        document.getElementById("session").textContent = bool==true ? session: "24H";
         document.getElementById("day").innerText = d;
         document.getElementById("day").textContent = d;
         document.getElementById("date").innerText = a;
@@ -109,19 +118,6 @@
 
         setTimeout(showTime, 1000);
       }
-      let mode = document.querySelector(".mode")
-        mode.addEventListener("toggle",()=>{
-            function chngMode(){
-        let date = new Date();
-        let h = date.getHours()
-        document.getElementById("MyClockDisplay").innerText = h;
-        document.getElementById("MyClockDisplay").textContent = h;
-        document.getElementById("session").innerText = "24H";
-        document.getElementById("session").textContent = "24H";
-        // document.querySelector(".clock").
-        setTimeout(chngMode, 1000);
-      }
-        })
       
       showTime();
     </script>
