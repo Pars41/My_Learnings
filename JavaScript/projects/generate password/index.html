@@ -110,7 +110,7 @@
       .form__input {
         font-family: "Roboto", sans-serif;
         color: #333;
-        letter-spacing: .7rem;
+        letter-spacing: 0.7rem;
         font-size: 1.5rem;
         margin: 0 auto;
         padding: 1.5rem 2rem;
@@ -171,7 +171,6 @@
         let rand1 = Math.random().toFixed(0);
         let rand2 = Math.random().toFixed(0);
         let rand3 = Math.random().toFixed(0);
-        console.log();
 
         alphabet = alphabet.split("");
         alphabetLower = alphabetLower.split("");
@@ -201,10 +200,7 @@
           return 0.5 - Math.random();
         }
 
-        console.log(password);
         password = last.join("");
-        console.log(rand1, rand2, rand3);
-        console.log(password);
 
         input.value = password;
       }
