@@ -31,7 +31,7 @@ body{
 
 .clock {
     position: absolute;
-    top: 75%;
+    top: 70%;
     left: 22%;
     transform: translateX(-50%) translateY(-50%);
     color: #292C31;
@@ -43,7 +43,7 @@ body{
 }
 .min{
     position: absolute;
-    top: 75%;
+    top: 70%;
     left: 60%;
     transform: translateX(-50%) translateY(-50%);
     color: #292C31;
@@ -54,7 +54,7 @@ body{
 }
 .sec{
     position: absolute;
-    top: 75%;
+    top: 70%;
     left: 89%;
     transform: translateX(-50%) translateY(-50%);
     color: #292C31;
@@ -65,7 +65,7 @@ body{
 }
 .session{
     position: absolute;
-    top: 40%;
+    top: 35%;
     left: 18%;
     transform: translateX(-50%) translateY(-50%);
     color: #292C31;
@@ -76,7 +76,7 @@ body{
 }
 .day{
     position: absolute;
-    top: 35%;
+    top: 30%;
     left: 40%;
     transform: translateX(-50%) translateY(-50%);
     color: #292C31;
@@ -87,7 +87,7 @@ body{
 }
 .date{
     position: absolute;
-    top: 35%;
+    top: 30%;
     left: 80%;
     transform: translateX(-50%) translateY(-50%);
     color: #292C31;
