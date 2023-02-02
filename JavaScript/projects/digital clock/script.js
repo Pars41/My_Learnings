@@ -3,6 +3,9 @@ light.addEventListener("click",()=>{
 let screen = document.querySelector(".screen")
 
     screen.classList.toggle("lightOnOff")
+    setTimeout(()=>{
+      screen.classList.remove("lightOnOff")
+    },3000)
 })
 let alarm = document.querySelector(".alarm")
 alarm.addEventListener("click",()=>{
@@ -10,6 +13,8 @@ let audio = document.querySelector("#myAudio")
 
     audio.play()
 })
+
+
 let bool = true;
 
 let mode = document.querySelector(".mode")
