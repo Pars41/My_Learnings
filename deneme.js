@@ -19,8 +19,35 @@
 //   }
 // }
 
-if(false==="false"){
-  console.log("false");
-}else{
-  console.log("değil");
-}
+// if(false==="false"){
+//   console.log("false");
+// }else{
+//   console.log("değil");
+// }
+// let modal = document.querySelector('#result');
+// setTimeout(function () {
+//   console.log("YUSUF");
+// modal.classList.remove('hidden');
+// }, 1000);
+// console.log('Results shown');
+
+// let Storm = function () {};
+// Storm.prototype.precip = 'rain';
+// let WinterStorm = function () {};
+// WinterStorm.prototype = new Storm();
+// WinterStorm.prototype.precip = 'snow';
+// let bob = new WinterStorm();
+// console.log(bob.precip);
+
+// function logThis() {
+//   this.desc = 'logger';
+//   console.log(this);
+//   }
+//   new logThis();
+var start = 1;
+function sayHello() {
+  console.log('hello');
+  }
+  console.log(sayHello.prototype);
+
+

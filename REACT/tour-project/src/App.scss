@@ -1,0 +1,11 @@
+@import "./scss/reset";
+@import "./scss/mixins";
+@import "./scss/-variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Comfortaa:wght@300;400;500;600;700&family=Julee&display=swap");
+
+body {
+  font-family: "Bowlby One SC", cursive;
+  font-family: "Comfortaa", cursive;
+  font-family: "Julee", cursive;
+  background-color: $blue;
+}

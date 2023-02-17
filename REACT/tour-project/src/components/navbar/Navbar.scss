@@ -1,0 +1,24 @@
+@import "../../scss/-variables.scss";
+
+.nav-bar{
+    background-color: $dark;
+    color: $white;
+}
+ul{
+    display: flex;
+    justify-content:center;
+    gap: 1.5rem;
+}
+ul li{
+    display: inline-block;
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: .7rem;
+    &:hover{
+        cursor: pointer;
+        background-color: $light;
+        color: $dark;
+        border-radius: 0 0 .8rem .8rem;
+        
+    }
+}
