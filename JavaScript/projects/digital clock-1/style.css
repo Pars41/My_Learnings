@@ -104,7 +104,7 @@ body {
   width: 60px;
   height: 60px;
   top: 5%;
-  left: -37.8%;
+  left: -39%;
   transform: translateX(-50%) translateY(-50%);
   color: #292c31;
   font-size: 45px;
@@ -114,9 +114,8 @@ body {
   cursor: pointer;
 }
 .lightOnOff {
-  background-color: rgba(36, 229, 36, 0.6);
+  background-color: rgba(36, 229, 36, 0.63);
   border-radius: 1.2rem;
-  transition: background-color .3s;
 }
 #myAudio {
   display: none;
@@ -126,7 +125,7 @@ body {
   width: 60px;
   height: 60px;
   top: 99%;
-  right: -52.8%;
+  right: -55%;
   transform: translateX(-50%) translateY(-50%);
   color: #292c31;
   font-size: 45px;
@@ -140,7 +139,7 @@ body {
   width: 60px;
   height: 60px;
   top: 99%;
-  left: -38.5%;
+  left: -40%;
   transform: translateX(-50%) translateY(-50%);
   color: #292c31;
   font-size: 45px;
@@ -148,49 +147,4 @@ body {
   letter-spacing: 5px;
   font-weight: 900;
   cursor: pointer;
-}
-.alarm img{
-  float: right;
-}
-.left{
-  position: absolute;
-  top: -28%;
-  left: -38%;
-  z-index: 5;
-}
-.right{
-  position: absolute;
-  top: -25%;
-  right: -40%;
-  z-index: 5;
-}
-.push-right{
-  animation: push-right 1s ease-in-out alternate;
-}
-.push-left{
-  animation: push-left 1s ease-in-out alternate;
-}
-@keyframes push-right {
-  0%{
-    
-  }
-  50%{
-    transform:translateX(14px);
-  }
-  100%{
-    
-
-  }
-}
-@keyframes push-left {
-  0%{
-    
-  }
-  50%{
-    transform:translateX(-14px);
-  }
-  100%{
-    
-
-  }
 }

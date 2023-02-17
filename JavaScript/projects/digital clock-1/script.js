@@ -5,10 +5,6 @@ let light = document.querySelector(".light");
 light.addEventListener("click", () => {
   let screen = document.querySelector(".screen");
   screen.classList.toggle("lightOnOff");
-  document.querySelector("#top-left-push").classList.add("push-right")
-  setTimeout(() => {
-    document.querySelector("#top-left-push").classList.remove("push-right");
-  }, 1000);
   setTimeout(() => {
     screen.classList.remove("lightOnOff");
   }, 3000);
@@ -20,11 +16,6 @@ let alarm = document.querySelector(".alarm");
 
 alarm.addEventListener("click", () => {
   let audio = document.querySelector("#myAudio");
-  document.querySelector("#bottom-right-push").classList.add("push-left")
-  setTimeout(() => {
-    document.querySelector("#bottom-right-push").classList.remove("push-left");
-  }, 1000);
-
   audio.play();
 });
 
@@ -35,11 +26,6 @@ let bool = true;
 let mode = document.querySelector(".mode");
 
 mode.addEventListener("click", () => {
-  document.querySelector("#bottom-left-push").classList.add("push-right")
-  setTimeout(() => {
-    document.querySelector("#bottom-left-push").classList.remove("push-right");
-  }, 1000);
-
   bool = !bool;
 });
 
