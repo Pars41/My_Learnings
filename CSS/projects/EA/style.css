@@ -1,0 +1,277 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #1D2033;
+    color: white;
+}
+
+.container{
+    /* border: 2px solid red; */
+    text-align: center;
+    /* margin-top: 2rem; */
+    width: 400px;
+    margin: 2rem auto;
+    position: relative;
+
+}
+.margin{
+    margin-bottom: 1.5rem;
+}
+
+.l-margin{
+    margin-bottom: .5rem;
+}
+
+h1{
+    font-size: 24px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.image img{
+    width: 64px;
+    
+}
+.logo img{
+    width: 48px;
+    border-radius: 8px;
+    margin: 7px;
+    padding: 12px;
+    
+}
+
+.logo img:first-child{
+    background-color: white;
+}
+.logo img:nth-child(3){
+    background-color: white;
+}
+.logo img:nth-child(2){
+    background-color: #1877F2;
+}
+.logo img:nth-child(5){
+    background-color: #107C10;
+}
+.logo img:nth-child(6){
+    background-color: #0049A0;
+}
+.logo img:nth-child(4){
+    background-color: black;
+}
+
+.logo img:hover{
+    transform: scale(0.95);
+    cursor: pointer;
+    transition: transform 0.5;
+
+}
+
+.cizgi div{
+    display: inline-block;
+    font-size: 16px;
+
+}
+
+.cizgi div:first-child, .cizgi div:last-child{
+    width: 175px;
+    height: 5px;
+    border-top: 3px solid #3A3C4C ;
+
+}
+
+p{
+    color: #908D8A;
+    margin: .5rem;
+    /* font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif */
+    font-family: 'Rubik', sans-serif;
+}
+
+label{
+
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    letter-spacing: 1.4px;
+
+}
+
+#password , #phone{
+    width: 400px;
+    height: 48px;
+    background-color: #141724;
+    border: 2px solid #62626F;
+    padding: 0 10px 0 12px;
+    border-radius: 8px;
+    transition: box-shadow 0.4s;
+
+
+    margin-top: .5rem;
+    color: white;
+    font-size: 15px;
+}
+
+#password:hover , #phone:hover{
+    border: 2px solid rgb(185, 185, 185);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 20px 5px
+}
+
+#password:focus , #phone:focus{
+    outline: none;
+    border: 2px solid white;
+    box-shadow: rgba(255, 255, 255, .2) 0px 0px 5px 3px;
+    
+}
+
+#password::placeholder , #phone::placeholder{
+    font-family: 'Rubik', sans-serif;
+    font-size: 15px ;
+    color: #62626F ;
+}
+
+/* form input{
+    margin-top: .5rem;
+    color: white;
+    font-size: 15px;
+} */
+
+input{
+    /* width: 380px;
+    height: 48px;
+    background-color: #141724; */
+}
+
+#check{
+    width: fit-content;
+    height: fit-content;
+}
+
+.phone , .password,.check {
+    text-align: left;
+}
+
+form{
+    /* padding: 0 .6rem; */
+}
+
+form div{
+    margin-top: 1rem;
+}
+
+
+
+#check{
+    height: 24px;
+    width: 24px;
+}
+
+input[type=checkbox]{
+    visibility: hidden;
+}
+
+.stylecheck{
+    position: absolute;
+    top: 451px;
+    left: 1px;
+    height: 24px;
+    width: 24px;
+    background-color: #141724;
+    border: 2px solid #62626F;
+    border-radius: 4px ;
+}
+
+.stylecheck:hover{
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 15px 3px;
+    
+    
+    
+}
+
+
+
+.check label{
+    font-size: 16px;
+    letter-spacing: 0.48px;
+    cursor: pointer;
+    margin-left: .5rem;
+    padding-top: .12rem;
+    
+}
+
+
+.submit input{
+    color: white;
+    background-color: #1F55CA;
+    height: 48px;
+    width: 400px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    letter-spacing: 2.4px;
+    font-weight: 700;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+
+}
+
+.submit input:hover{
+    transition: all 0.15s;
+    transform: scale(0.95);
+    box-shadow: #1f55ca30 0px 0px 20px 6px;
+}
+
+.submit input:active{
+    background-color: #355fbb;
+}
+
+
+
+.forgot a{
+    font-size:medium;
+    color: #3b68c9;
+    text-decoration: none;
+    font-family: 'Rubik', sans-serif;
+    
+}
+
+.forgot a:hover{
+    text-decoration: underline;
+}
+
+.forgot a:visited{
+    text-decoration: none;
+    
+}
+/*? remember me div */
+.check{
+    display: flex;
+}
+
+
+.create button{
+    height: 48px;
+    width: 400px;
+    font-family: 'Rubik', sans-serif;
+    letter-spacing: 2.4;
+    background-color: #141724;
+    color: white;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight:400;
+    outline: none;
+    border: 2px solid #235FE3;
+}
+
+.create button:hover{
+    transition: all 0.15s;
+    transform: scale(0.95);
+    box-shadow: #1f55ca30 0px 0px 20px 6px;
+}
+
+.forgot{
+    margin-bottom: 1.5rem;
+}
