@@ -1,0 +1,23 @@
+@import "../../scss/variables", "../../scss/mixins";
+
+.about-me {
+  min-height: 60vh;
+  margin: auto;
+  &_header {
+    @include textShadow(#b4b4b45f, 2px, 2px, $secondary-color);
+  }
+  &_description {
+    text-align: justify;
+    @include textShadow(#b4b4b45f, 2px, 2px, white);
+  }
+}
+
+.about-me-history {
+  background-color: $primary-color;
+  &_job {
+    width: 70%;
+    border-bottom: 0.5rem solid $secondary-color;
+    background-color: #5f695f;
+    padding: 1rem 2rem 0;
+  }
+}

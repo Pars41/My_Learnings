@@ -1,0 +1,16 @@
+@import "../../scss/variables", "../../scss/mixins";
+
+.home-banner {
+  height: 80vh;
+  &_greeting {
+    @include textShadow(black, 2px, 2px, #fff);
+  }
+  &_name {
+    border-bottom: 0.4rem solid #fff;
+    padding-bottom: 0.5rem;
+    @include textShadow(black, 2px, 2px, #fff);
+  }
+  &_title {
+    @include textShadow(black, 2px, 2px, #fff);
+  }
+}

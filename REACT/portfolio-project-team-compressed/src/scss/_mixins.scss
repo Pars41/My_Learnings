@@ -1,0 +1,43 @@
+@mixin transition($sec) {
+  transition: all $sec;
+}
+
+@mixin bgImg($height, $url) {
+  height: $height;
+  width: 100%;
+  background-image: linear-gradient(
+      to right,
+      rgba($primary-color, 0.9),
+      rgba($primary-color, 0.3)
+    ),
+    url($url);
+  background-position: center center;
+  background-size: cover;
+}
+
+@mixin overlayPage() {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+@mixin textShadow($shadow-color, $shadow-amount, $spread-amount, $text-color) {
+  text-shadow: $shadow-amount $shadow-amount $spread-amount $shadow-color;
+  color: $text-color !important;
+}
+
+@mixin media-lowwidth {
+  @media screen and (max-width: 360px) {
+    @content;
+  }
+}
+
+@mixin media-xsm {
+  @media screen and (max-width: 575px) {
+    @content;
+  }
+}

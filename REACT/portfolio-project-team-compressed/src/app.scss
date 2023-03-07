@@ -1,0 +1,36 @@
+@import "./scss/reset", "./scss/variables", "./scss/mixins";
+
+.background {
+  @include overlayPage();
+  background-image: url($main-bgImg-path);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &::after {
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #222222b8;
+  }
+}
+
+.notFoundBg {
+  @include overlayPage();
+  background-color: #fff;
+}
+
+body {
+  font-family: $font-family;
+  line-height: 1;
+  color: $text-color;
+}
+
+@include media-xsm {
+  html {
+    font-size: 0.9rem;
+  }
+}

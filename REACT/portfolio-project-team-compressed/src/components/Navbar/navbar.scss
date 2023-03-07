@@ -1,0 +1,26 @@
+@import "../../scss/variables", "../../scss/mixins";
+
+
+.navbar {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0 2rem;
+  height: 10vh;
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
+    font-family: $font-family;
+    @include transition(0.5s);
+    &:hover {
+      color: orange;
+    }
+    &:active {
+      color: red;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@import "../../scss/variables", "../../scss/mixins";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css");
+
+.links {
+  a {
+    padding: 0.4rem;
+    color: #fff;
+    @include transition(0.5s);
+    &:hover {
+      color: $secondary-color;
+    }
+    &:active {
+      color: red;
+    }
+  }
+}
+
+footer.horizontal {
+  // border: 2px solid red;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  height: 10vh;
+  @extend .links;
+}
+
+footer.vertical {
+  // border: 2px solid red;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 2rem;
+  background-color: $primary-color;
+  .socials {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 1rem;
+    @extend .links;
+  }
+  .copyright {
+    position: fixed;
+    bottom: 1rem;
+    right: 3rem;
+    // transform: rotate(90deg) translate(-3rem, -5rem);
+    writing-mode: vertical-lr;
+  }
+}
+
+footer.center {
+  // border: 2px solid red;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+  @extend .links;
+}

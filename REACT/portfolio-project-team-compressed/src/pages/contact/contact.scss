@@ -1,0 +1,14 @@
+@import "../../scss/variables", "../../scss/mixins";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css");
+
+.contacts {
+  min-height: 40vh;
+  margin: auto;
+  &_layout {
+    p {
+      color: $secondary-color;
+      word-break: keep-all;
+      white-space: nowrap;
+    }
+  }
+}
